@@ -89,7 +89,7 @@
                                         </div>
                                         <div class="sidebar-blog__posts-content">
 
-                                            <h4 class="sidebar-blog__posts-title"> Catania Residencial CP 77536, Cancun Q.R.</h4>
+                                            <h4 class="sidebar-blog__posts-title"> Quintana roo, Cancun Q.R.</h4>
                                         </div>
                                     </li>
                                 </ul>

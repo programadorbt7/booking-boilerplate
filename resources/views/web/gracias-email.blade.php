@@ -37,10 +37,10 @@
         </div>
         <div class="offer-one__shape-one trevlo-splax"
             data-para-options='{ "orientation": "left", "scale": 1.5, "overflow": true }'
-            style="background-image: url('assets/images/shapes/offer-shape-1.png');"></div><!-- /.bg -->
+            style="background-image: url({{ asset('assets/images/shapes/offer-shape-1.png') }});"></div><!-- /.bg -->
         <div class="offer-one__shape-two trevlo-splax"
             data-para-options='{ "orientation": "right", "scale": 1.5, "overflow": true }'
-            style="background-image: url('assets/images/shapes/offer-shape-2.png');"></div><!-- /.bg -->
+            style="background-image: url('{{ asset('assets/images/shapes/offer-shape-2.png') }}');"></div><!-- /.bg -->
         <div class="offer-one__bottom-bg"
             style="background-image: url('{{ asset('assets/images/offer/offer-1-4.png') }}');"></div><!-- /.bg -->
     </section>
