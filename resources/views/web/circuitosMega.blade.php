@@ -35,7 +35,7 @@
                             <div class="sidebar-blog__single sidebar-blog__single--posts wow animated fadeInUp"
                                 data-wow-delay="0.1s" data-wow-duration="1500ms">
                                 <h4 class="sidebar-blog__title text-center">
-                                    <img style="width: 150px" src="{{ asset('assets/images/logos/logo2-funtastic.webp') }}"
+                                    <img style="width: 150px" src="{{ asset('cucapah/img/logo-cucapah-mobile.webp') }}"
                                         alt="Logo Funtastic">
                                 </h4>
                                 <ul class="sidebar-blog__posts ">
@@ -87,7 +87,7 @@
                                         </div>
                                         <div class="sidebar-blog__posts-content">
 
-                                            <h4 class="sidebar-blog__posts-title"> Catania Residencial CP 77536, Cancun Q.R.</h4>
+                                            <h4 class="sidebar-blog__posts-title"> Quintana roo, Cancun Q.R.</h4>
                                         </div>
                                     </li>
                                 </ul>
