@@ -511,8 +511,8 @@
             <span class="mobile-nav__close mobile-nav__toggler"><i aria-hidden="true" class="fa fa-times"></i></span>
 
             <div class="logo-box">
-                <a href="/" aria-label="logo image"><img
-                        src="{{ asset('assets/images/logos/logo4-funtastic.webp') }}" width="155"
+                <a href="/" aria-label="logo image" class="logoMobile"><img
+                        src="{{ asset('cucapah/img/logo-cucapah-mobile.webp') }}" width="155"
                         alt="Logo Funtastic" /></a>
             </div>
             <div class="mobile-nav__container"></div>
