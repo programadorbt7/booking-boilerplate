@@ -1,0 +1,68 @@
+/* ---- CARD HOTEL CARGANDO ---- */
+.backgroundCoverHotel {
+    background: #ececec;
+
+}
+
+.square {
+    width: 80px;
+    height: 80px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    background: #ececec;
+}
+
+.lineInfo {
+    height: 30px;
+    background: #ececec;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+.lineInfoSmall {
+    height: 20px;
+    width: 70%;
+    background: #ececec;
+    border-radius: 2px;
+    margin-bottom: 4px;
+}
+
+.item-list {
+    margin: 10px 0px;
+}
+
+.backgroundCoverHotel,
+.square,
+.lineInfo,
+.lineInfoSmall,
+.verHabitacionesLink,
+.verHabitacionesLink {
+    background-image: linear-gradient(120deg, #ececec 50%, #fafafa 60%, #fafafa 61%, #ececec 70%);
+    background-size: 200%;
+    background-position: 100% 0;
+    animation: waves 2s linear infinite;
+}
+
+@keyframes waves {
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+@media(max-width: 1200px) {
+    .backgroundCoverHotel {
+        height: 290px;
+        width: 263px;
+    }
+}
+
+@media(max-width: 768px) {
+    .backgroundCoverHotel {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.text-muted {
+    color: #777 !important;
+}

@@ -1,0 +1,185 @@
+/* Estilos para la lista de transportacion y tiendita */
+.row__Container__Unidad {
+    padding: 0;
+    /* margin: 0 auto; */
+    width: 80%;
+    border: 1px #DED0B6 solid;
+    border-radius: 5px;
+    margin: 10px auto;
+    padding: 10px;
+}
+.container__Information__paxs {
+    background-color: #7B66FF;
+    color: #fff;
+    padding: 2px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.imgHeight {
+    height: 230px;
+}
+.a__Img__Container {
+    height: 200px;
+    display: flex;
+}
+.check__models > li > i {
+    color: #B31312;
+}
+
+.table__Container__Ticket {
+    width: 50%;
+}
+
+@media (max-width: 990px) {
+    .imgHeight {
+        height: 245px;
+    }
+
+    .container__icons__Transportation {    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 790px){
+    .imgHeight {
+        height: 267px;
+    }
+}
+
+@media(max-width: 300px) {
+    .container__table__info {
+        width: 100%;
+    }
+    .container__Information__paxs {
+        font-size: 0.8rem;
+    }
+
+    tbody {
+        font-size: .8rem;
+    }
+
+    tbody > tr > td {
+        padding-left: 2px !important;
+        padding-right: 2px !important;
+    }
+}
+
+/* min-width */
+
+@media(max-width: 1200px) {
+    .table__Container__Ticket {
+        width: 90%;
+    }    
+}
+
+@media(max-width: 740px) {
+    .table__Container__Ticket {
+        width: 100%;
+    }    
+}
+
+.container__Table__Main {
+    overflow: scroll; 
+    overflow-y: hidden;
+}
+
+@media(min-width: 1100px) {
+    
+    .container__Table__Main { 
+        overflow-x: hidden;
+    }
+}
+
+.btn__Reservar__Transportacion {
+    /* font-size: 0.8rem; */
+    font-size: 1.3rem;
+    padding: 4px; 
+    background-color: #f6aa3c; 
+    border-color: #f6aa3c;
+}
+
+.oculto {
+    display: none;
+}
+
+.lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 30px;
+}
+
+.lds-facebook div {
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 13px;
+    background: #1e87f3;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds-facebook div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+}
+
+@keyframes lds-facebook {
+    0% {
+        top: 0px;
+        height: 15px;
+    }
+
+    50%,
+    100% {
+        top: 18px;
+        height: 10px;
+    }
+}
+
+.title__Transportacion {
+    font-size: 30px;
+}
+@media (max-width: 767px) {
+    .title__Transportacion {
+        font-size: 20px !important;
+    }    
+}
+
+@media(max-width: 400px) {
+    .title__Transportacion {
+        font-size: 20px !important;
+    }
+}
+
+@media(max-width: 300px) {
+    .title__Transportacion {
+        font-size: 12px !important;
+    }
+}
+
+.listServicesCont {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.listServicesCont > li {
+    margin-left: 7px;
+}

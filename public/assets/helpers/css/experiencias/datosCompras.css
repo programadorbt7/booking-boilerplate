@@ -1,0 +1,190 @@
+/*--------------------------------------------------------------
+# Procesos de pagos
+--------------------------------------------------------------*/
+#buttonWP {
+    background-color: #0A6847;
+    color: #fff;
+    border-radius: 6px;
+    border: none;
+    padding: 3px 12px;
+    box-shadow: 1px 1px 3px 0px #322C2B;
+    margin: 15px auto;
+    width: max-content;
+    height: 36px;
+    display: block;
+}
+
+#procesosPagos {
+    display: block;
+}
+#procesosPagos > label {
+    font-size: 18px;
+    display: block;
+}
+
+#procesoDePagoSeleccionado:focus {
+    border: 2px solid #08b924 !important;
+}
+
+#textAlternativoSeleccione {
+    margin-top: 17px;
+    display: block;
+}
+
+#textoAnticipo {
+    background-color: #074173;
+    color: #fff;
+    border-radius: 15px;
+    padding-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    min-width: 180px;
+    max-width: max-content;
+    padding-right: 15px;
+}
+
+#procesoDePagoSeleccionado {
+    max-width: 330px;
+    min-width: 180px;
+}
+
+#td1precioTotalAnticipoTable {
+    text-align: end;
+}
+
+#td1precioTotalAnticipoTable > input {
+    text-align: end;
+}
+
+/*--------------------------------------------------------------
+# Modal Terminos y condiciones y Checkbox
+--------------------------------------------------------------*/
+/* CASO: check politicas */
+.dissabled-btn{
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.dissabled-wp{
+    opacity: 0.6;
+}
+
+#check-politicas{
+    cursor: pointer;
+}
+
+.jw-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, .75);
+    padding: 40px;
+    overflow: auto;
+}
+
+.jw-modal.open {
+    display: block;
+}
+
+.jw-modal-body {
+    padding: 40px;
+    border-radius: 10px;
+    background: #fff;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+}
+
+@media (max-width: 767px) {
+    .jw-modal-body {
+        width: 90%;
+    }
+}
+
+.txt-check{
+    color: #736D75;
+    cursor: pointer;
+}
+
+.txt-check:hover{
+    color: #2465ff;
+}
+
+.txt-politicas {
+    max-height: 450px;
+    overflow: scroll;
+}
+
+.close-modal {
+    background: red;
+    color: white;
+    float: right;
+    border-radius: 10px;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
+body.jw-modal-open {
+    overflow: hidden;
+}
+
+#terminos-condiciones {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.word-wrap {
+    word-break: break-word;
+}
+
+@media (max-width:400px) {
+    .word-wrap {
+        font-size: 21px;
+        word-break: break-word;
+    }        
+}
+
+@media (max-width:300px) {
+    .word-wrap {
+        font-size: 15px;
+        word-break: break-word;
+    }        
+}
+
+.buttonCloseModal > i {
+    color: #fff;
+}
+
+#procesoDePagoSeleccionado {
+    border: 2px dashed #b38e3f !important;
+    margin-top: 10px;
+    cursor: pointer;
+    -webkit-appearance: auto !important;
+}
+
+#strongprecioTotalAnticipoTable {
+    text-transform: uppercase;
+}
+
+/* Estilos alerta no se acepta cupones en procesos de pagos anticipos */
+.noAceptaCupones {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #FDA403;
+    color: #fff;
+    padding: 5px 5px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.noAceptaCupones > i {
+    margin-right: 5px;
+}
+
+#checkCoupon {
+    cursor: pointer;
+}

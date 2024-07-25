@@ -1,0 +1,378 @@
+/*=======================================================================
+// GALERIA
+=========================================================================*/
+
+.image-link {
+    cursor: -webkit-zoom-in;
+    cursor: -moz-zoom-in;
+    cursor: zoom-in;
+}
+
+.cardHolder {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.card-grid {
+    flex: 1;
+    margin: .5em;
+    height: 200px;
+    min-width: 200px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all .25s ease;
+    animation: populate .5s ease-out normal backwards;
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+    /* <---- Fallback for IE and Edge*/
+}
+
+.card-grid:hover {
+    transform: scale(1.04);
+    z-index: 1;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-grid-popup {
+    flex: 1;
+    height: 350px;
+    min-width: 400px;
+    margin: .5em 1em .5em 0em;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all .25s ease;
+    animation: populate .5s ease-out normal backwards;
+
+}
+
+a .card-grid-popup2:hover {
+    transform: scale(1.04);
+    z-index: 1;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-grid-popup2 {
+
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all .25s ease;
+    animation: populate .5s ease-out normal backwards;
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+}
+
+@keyframes populate {
+    0% {
+        transform: scale(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .card-grid-popup {
+        min-width: 100%;
+        height: 250px;
+    }
+
+    .package-item .package-meta {
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn-cards {
+        text-align: center;
+        margin-top: 10px;
+        float: none !important;
+    }
+}
+
+/**Cartel de sandbox activado**/
+
+.statusSandBox {
+    background-color: red;
+    color: #fff;
+    width: max-content;
+    height: max-content;
+    padding: 6px 9px;
+    border-radius: 4px;
+    position: fixed;
+    z-index: 13;
+    bottom: 13px;
+    transform: translate(-50%);
+    left: 50%;
+    opacity: 0.92;
+    align-items: center;
+    display: flex;
+    font-size: 18px;
+    gap: 8px;
+}
+
+.statusSandBox > img {
+    height: 33px;
+    filter: invert(1);
+    animation-name: zoom;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@media(max-width: 799px) {
+    .statusSandBox {
+        font-size: 22px;
+    }
+    .statusSandBox > img {
+        height: 24px;
+    }
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(1.2);
+    }
+    33% {
+        transform: scale(1.25);
+    }
+    57% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/*=======================================================================
+// Correciones pedrito
+=========================================================================*/
+
+.correcion-pedrito-1 {
+    padding-top: 59px !important;
+}
+
+.col-lg-8 .details-exp {
+    width: 37% !important;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .col-lg-8 .details-exp {
+        width: 35% !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .col-lg-8 .details-exp {
+        width: 34% !important;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .col-lg-8 .details-exp {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 479px) {
+    .container-exp .details-exp {
+        width: 90% !important;
+    }
+}
+
+@media (min-width: 480px) {
+    .container-exp .details-exp {
+        width: 37% !important
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .container-exp .details-exp {
+        width: 32% !important
+    }
+}
+
+
+@media (min-width: 992px) and (max-width: 1716px) {
+    .container-exp .details-exp {
+        width: 33% !important;
+    }
+}
+
+
+.container-exp .details-exp {
+    word-wrap: break-word !important;
+  word-break: break-word !important;
+}
+
+.contenedor-otras-exp .details-exp {
+    word-wrap: break-word !important;
+  word-break: break-word !important;
+}
+
+
+.tour-type-two__box__back__content {
+    word-wrap: break-word !important;
+  word-break: break-word !important;
+}
+
+
+.promos .destination-two__card-img-box--round img {
+    height: auto !important;
+    aspect-ratio: 74/105;
+}
+
+
+.trevlo-breadcrumb li {
+    color: white !important;
+}
+
+.tour-type-two__box__front__title {
+    display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (max-width: 513px) {
+.correcion-pedrito-20 {
+padding: 0px;
+}
+
+.container-exp {
+    margin: 0 2.5rem;
+}
+}
+
+@media (max-width: 484px){
+    .correcion-pedrito-21 {
+        font-size: 33px;
+    }
+
+    .correcion-pedrito-22 {
+        font-size: 21px;
+    }
+}
+
+.tour-type-two__box__back__title {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.tour-type-two__box__back__text {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@media (max-width: 480px) {
+    .details-exp span {
+        color: white;
+    }
+}
+
+.correcion-nopromocion-23 {
+    top: 0;
+}
+
+/*=======================================================================
+// Promociones
+=========================================================================*/
+
+.pricing-page__carousel .owl-stage-outer {
+    padding-top: 0px !important;
+}
+
+
+.destination-two__card {
+    position: relative;
+}
+
+
+.promos .destination-two__card-img-box--round {
+    border-radius: 10px;
+}
+
+.destination-two__card-img-box {
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.promos .destination-two__card-img-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    border-radius: 40px;
+    background: linear-gradient(to bottom, #0000006e 0%, #0000000f 50%, #000000a3 100%);
+}
+
+
+.promos .destination-two__card-img-box--round img {
+    height: 75vh;
+    object-fit: cover;
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+}
+
+.destination-two__card-img--round {
+    border-radius: 40px;
+}
+
+
+.nombre-p {
+    position: absolute;
+    top: 10px;
+    z-index: 4;
+    left: 10px;
+}
+
+
+.promos-whats {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 4;
+}
+
+
+.promos .incluye {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 4;
+}
+
+
+.nombre-p h3 {
+    color: white;
+}
+
+.promos .incluye p, .promos .incluye i {
+    color: white;
+}
+
+/*=======================================================================
+// Transportacion
+=========================================================================*/
+.textSinDisponibilidad {
+    text-align: center;
+    padding-top: 1.5rem;
+}
+

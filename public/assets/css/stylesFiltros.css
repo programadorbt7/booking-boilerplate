@@ -1,0 +1,79 @@
+/* BTN CLEANTXT */
+.cleanText {
+    background-color: #ff0000b8;
+    color: white;
+    width: 40px;
+    border-radius: 0% 30% 30% 0%;
+    box-shadow: none !important;
+    border: none !important;
+    cursor: pointer;
+}
+
+/* ---- FILTROS ---- */
+.active-nav {
+    transform: translateX(0%) !important;
+}
+
+#navbtn2 {
+    display: none;
+}
+
+.ui-autocomplete {
+    max-height: 250px;
+    width: 150px;
+    overflow-y: scroll;
+}
+
+@media screen and (max-width: 991px) {
+    #filtros-nav {
+        top: 0%;
+        padding-top: 50px;
+        left: 0;
+        height: 100%;
+        width: 80%;
+        position: fixed !important;
+        transform: translateX(-100%);
+        z-index: 5000;
+        transition: 0.5s;
+        overflow-y: scroll;
+        background-color: white;
+    }
+
+    #navbtn2 {
+        display: block;
+        box-shadow: 2px 3px 5px black;
+        border-radius: 50%;
+        border: none;
+        position: fixed;
+        top: 88%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 5001;
+        height: 54px;
+        background-color: #1e87f3;
+        width: 54px;
+        font-size: 16px;
+        opacity: 80%;
+    }
+
+    .ui-autocomplete {
+        z-index: 8000;
+        max-height: 250px !important;
+        overflow-y: scroll;
+    }
+
+}
+
+@media(max-width: 380px) {
+    #filtros-nav {
+        width: 80%;
+    }
+}
+
+@media(max-width: 310px) {
+    .ui-autocomplete {
+        width: 170px !important;
+        max-height: 250px !important;
+        overflow-y: scroll;
+    }
+}

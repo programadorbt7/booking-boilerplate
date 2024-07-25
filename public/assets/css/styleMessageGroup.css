@@ -1,0 +1,13 @@
+.messageGroup {padding: 10px; background-color: #ec7c26; color: #fff;}
+
+.messageGroup > i, .messageGroupError > i, .messageGroupCompleted > i, .messageGroupAccept > i {
+    margin-right: 4px;
+}
+
+.messageGroupError {padding: 10px; background-color: #B80000; color: #fff;}
+.messageGroupAccept {padding: 10px; background-color: #C21292; color: #fff; }
+.messageGroupCompleted {padding: 10px; background-color: #65B741; color: #fff;}
+.green{background: green;}
+#mensajeLimiteContadorPersonas, #mensajeMinimoContadorPersonas{margin-bottom: 10px;}
+.line {text-decoration: line-through red 2px; border:none;}
+#totalDummy{display: block;}

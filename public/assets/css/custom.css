@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.oculto{
+    display: none;
+}
+.precioProducto{
+
+}
+.precioProducto span{
+    font-size: 1.5em;
+}
+.precioProducto small{
+    font-size: .7em;
+}
+.totalProducto{
+    display: none;
+    background: red;
+    color: #fff;
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    border-radius: 24px;
+    z-index: 999;
+    padding: 10px;
+    line-height: 14px;
+    text-align: center;
+    /* font-size: 0.75rem; */
+    font-size: 1.5rem;
+}
+/* .totalProducto span{
+
+}
+.totalProducto small{
+
+} */
+.capacidad{
+    position: absolute;
+    z-index: 999;
+    background: #F6AA3C;
+    width: 100%;
+    bottom: 0;
+    color: #fff;
+    padding: 4px 0px;
+    font-weight: bold;
+}
+.tablaResumenTransportacion{
+    width: 500px;
+}
+.textArea{
+    height: 100px !important;
+}
+
+@media (max-width: 480px) {
+    .tablaResumenTransportacion{
+        max-width: 100%;
+    }
+}

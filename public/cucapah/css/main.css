@@ -1,0 +1,224 @@
+:root {
+    --colorPrimario: #fdb900;
+    --colorSecundario: #3450c8;
+    --colorTercero: #ffbe00;
+    --colorCuarto: #000000;
+    --colorBackground: #081a36;
+}
+
+.nav-tabs .nav-link {
+    background-color: #344fc89b;
+}
+
+.banner-form .trevlo-btn::before {
+    background: #344fc89b;
+}
+
+.main-header::after {
+    background-color: var(--colorSecundario, #1e87f3);
+}
+
+.topbar-one {
+    background-color: var(--colorSecundario, #1e87f3);
+}
+
+.pricing-card__overlay::after {
+    background-color:  var(--colorSecundario, #1e87f3);
+}
+
+.topbar-one__info-icon {
+    color: var(--colorPrimario);
+}
+
+.main-header__phone-icon span {
+    color: var(--colorTercero);
+}
+
+.trevlo-btn--base::before {
+    background-color:  var(--colorSecundario, #1e87f3);
+}
+
+.benefit-one__bg {
+    background-color:  var(--colorSecundario, #1e87f3);
+}
+
+.faq-page__contact {
+    background-color:  var(--colorSecundario, #1e87f3);
+}
+
+.faq-page__contact-icon::after {
+    background-color:  var(--colorSecundario, #1e87f3);
+}
+
+.sec-title__tagline {
+    color:  var(--colorSecundario, #1e87f3);
+}
+.trevlo-btn--base-three::before {
+    background-color: var(--colorSecundario);
+}
+
+.benefit-one__counter__icon::before {
+    background-color: var(--colorSecundario);
+}
+
+.tour-listing-details__destination-info span {
+    color: var(--colorPrimario, #1e87f3);
+}
+
+.benefit-one__box__icon::after {
+    background-color: var(--colorSecundario);
+}
+
+.price-exp {
+    background: linear-gradient(90deg, rgb(51 136 213) 51%, rgb(119 14 160) 100%);
+}
+
+.blog-card-two__rm {
+    background-color: var(--colorPrimario);
+}
+
+.counter-three {
+    background-color: var(--colorBackground);
+}
+
+.main-footer {
+    background-color: var(--colorBackground);
+}
+
+.main-footer__bottom {
+    background-color: var(--colorBackground);
+}
+
+.pricing-card__overlay {
+    background-color: #ffc300;
+}
+
+.pricing-card h4 {
+    transition: all 0.3s ease;
+}
+
+.pricing-card:hover h4 {
+    color: #ffff;
+}
+
+.preloader {
+    background-color: #fff;
+}
+
+.img-preloader {
+    width: 240px !important;
+}
+
+.flight-icon {
+    width: 200px;
+    height: 85px;
+    color: var(--colorSecundario);
+}
+
+.imgHeaderHome {
+    height: 93px !important;
+    width: auto !important;
+}
+
+.blog-card-two__image__overlay {
+    background-color: #fdb90096;
+}
+
+.form-check-input:checked {
+    background-color: var(--colorTercero);
+    border-color: var(--colorTercero);
+}
+
+.tour-listing-details__top-carousel-overlay {
+    background-color: #eed1799e;
+}
+
+.main-menu .main-menu__list li ul li.current>a, .main-menu .main-menu__list li ul li:hover>a {
+    color: var(--colorSecundario, #1e87f3);
+}
+
+.main-menu .main-menu__list li ul li>a::after {
+    color: var(--colorSecundario, #1e87f3);
+}
+
+.tour-listing-details__faq .accrodion.active .accrodion-title h4::after {
+    color: var(--colorSecundario, #1e87f3);
+}
+
+.tour-listing-details__faq .accrodion-title h4 span {
+    color: var(--colorSecundario, #1e87f3);
+}
+
+.sidebar-blog__categories li a::before {
+    color: var(--colorSecundario, #1e87f3);
+}
+
+.blog-cat {
+    color: var(--colorSecundario);
+}
+
+.sidebar-blog__categories li a:hover {
+    color: var(--colorPrimario);
+}
+
+.sidebar-blog__categories li a:hover::before {
+    color: var(--colorPrimario);
+}
+
+.blog-card-two__title a:hover {
+    color: var(--colorTercero);
+}
+
+.blog-card-two__author__name a:hover {
+    color: var(--colorTercero);
+}
+
+#currency {
+    color: var(--colorTercero);
+    font-weight: 500;
+    border: 2px dashed var(--colorPrimario);
+}
+
+.footer-widget__info span {
+    color: var(--colorPrimario);
+}
+
+.main-footer__social-link::after {
+    background-color: var(--colorTercero);
+}
+
+.hrefImgLogoFooter {
+    background: #fff;
+    padding: 8px;
+    border-radius: 15px 0;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.scroll-to-top__wrapper {
+    background-color: var(--colorSecundario, #1e87f3);
+}
+
+.scroll-to-top__text {
+    color: var(--colorSecundario);
+}
+
+.footer_textura_arrugada{
+    background-image: url('../img/textura.png');
+}
+
+.footer-widget__links a:hover {
+    color: var(--colorTercero);
+}
+
+.footer-widget__info a:hover {
+    color: var(--colorTercero);
+}
+
+.tour-listing__card-inner-content::after {
+    background-color: var(--colorSecundario, #1e87f3);
+}
+
+.banner-form__wrapper {
+    background-color: #ffffff57;
+    color: #000;
+}

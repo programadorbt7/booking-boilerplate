@@ -1,0 +1,63 @@
+<div class="row thumbnails">
+    @foreach ($hotelesHome["data"] as $hotelFavorito)
+        <div class="col-lg-4 col-md-4 col-sm-12">
+            <div class="thumbnail no-border no-padding" style="border-color: #818381 !important; box-shadow: 5px 5px 5px #e1e1e1;">
+                <div class="media rel-div">
+                    <img src="https://app.bookingtrap.com/public/storage/{{$hotelFavorito["imagen"]}}" alt="{{$hotelFavorito["nombre_destino"]}}" style="object-fit: cover; height: 230px; width: 100%;">
+                    <div class="caption hovered tbl-wrp">
+                        <div class="caption-wrapper text-middle">
+                            <div class="caption-inner tbl-cell">
+                                <p class="caption-buttons popup-gallery">
+                                    <a title="{{$hotelFavorito["nombre_destino"]}}" href="hoteles-en/{{$hotelFavorito["nombre_destino"]}}/{{$hotelFavorito["id_region"]}}" class="btn caption-link"  ><i class="fa fa-link"></i></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="caption after-media">
+                    <h3 class="fsz-20 no-margin"> <a href="hoteles-en/{{$hotelFavorito["nombre_destino"]}}/{{$hotelFavorito["id_region"]}}"> {{$hotelFavorito["nombre_destino"]}} </a> </h3>
+                    <h6 class="fw-600 theme-color no-margin" style="padding: 12px 0; font-size: 1.5rem">FIN DE AÑO EN HUATULCO</h6>
+                    <p>¡¡¡ VIVE HUATULCO EN FIN DE AÑO!!! ¿Y tú, como vas a cerrar tu año? La mejor ruta para disfrutas las ...</p>
+                    <div style="display: flex; justify-content: space-around; ">
+                        <span>
+                            Desde: <b class="theme-color"><i>$12,000 MXN</i></b>
+                        </span>
+                        <span class="fa fa-calendar theme-color"><b class="" style="padding-left: 15px; color: #111111;"><i>5 Dias</i></b></span>
+                        <!--<button class="btn btn-primary px-4" >Explorar</button>-->
+                    </div>
+                </div>
+            </div>    
+        </div>
+    @endforeach
+</div>
+
+public function index(){
+    $hotelesHome = $this->hoteles->destinosHotelerosFavoritos(); 
+    $prueba      = $this->InfoWebEmpresa();    
+
+    // return $hotelesHome;
+    
+    $homeTours = $this->api->getContentGet('http://localhost/bookingtrapcrm/api/toursHome');
+    return view('web.index', ['homeTours' => $homeTours]);
+}
+
+
+{{print_r($homeTours)}}
+Array ( [status] => success [data] => Array ( [0] => Array ( [id] => 2 [nombre] => Peso Mexicano [iso] => MXN [tipo_cambio] => 1.0000 ) [1] => Array ( [id] => 3 [nombre] => Dólar [iso] => USD [tipo_cambio] => 16.1500 ) [2] => Array ( [id] => 4 [nombre] => Peso Argentino [iso] => ARS [tipo_cambio] => 0.1235 ) ) ) 1
+
+
+
+public function index(){
+    $hotelesHome = $this->hoteles->destinosHotelerosFavoritos(); 
+$prueba      = $this->InfoWebEmpresa();    
+
+// return $hotelesHome;
+
+$homeTours = $this->api->homeTours('http://localhost/bookingtrapcrm/api/toursHome');
+return view('web.index', ['homeTours' => $homeTours]);
+}
+
+
+
+{{print_r($homeTours)}}
+

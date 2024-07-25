@@ -1,0 +1,111 @@
+/* paypal and BBVA styles */
+.btnOpenPay {        
+    padding: 4px 45px;
+    background: #fff;
+    /* border: 3px inset #004481; */
+    box-shadow: 1px 2px 3px 0px #00000040;
+    margin-bottom: 3px;
+}
+
+.textCardPayment {
+    font-size: 12px;
+    line-height: 1.6rem;
+}
+
+@media(max-width: 985px) {
+    #paypal-button-container {
+        transform: scale(0.59);
+    }
+}
+
+@media(max-width: 400px) {
+    #paypal-button-container {
+        transform: scale(0.7);
+    }
+}
+
+.jw-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, .75);
+    padding: 40px;
+    overflow: auto;
+}
+
+
+.jw-modal.open {
+    display: block;
+}
+
+
+.jw-modal-body {
+    padding: 40px;
+    border-radius: 10px;
+    background: #fff;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+}
+
+
+@media (max-width: 767px) {
+    .jw-modal-body {
+        width: 90%;
+    }
+}
+
+
+.txt-check{
+    color: #736D75;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.txt-check:hover{
+    color: #2465ff;
+}
+
+
+.txt-politicas {
+    max-height: 450px;
+    overflow: scroll;
+}
+
+
+.close-modal {
+    background: #ff00009c;
+    color: white;
+    float: right;
+    border-radius: 10px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.close-modal:hover{color:#ffffffab}
+
+
+body.jw-modal-open {
+    overflow: hidden;
+}
+
+
+/* Solo para btn openpay | CASO: check politicas */
+.dissabled-btn{
+    pointer-events: none;
+    opacity: 0.6 !important;
+}
+
+@media(max-width:499px) {
+    .titulo_terms h2 {font-size: 25px}
+    .jw-modal-body {padding: 20px}
+}

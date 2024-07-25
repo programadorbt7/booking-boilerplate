@@ -1,0 +1,21 @@
+.iti {
+    width: 100%;
+}
+
+.iti--allow-dropdown input.iti__tel-input,
+.iti--allow-dropdown input.iti__tel-input[type=text],
+.iti--allow-dropdown input.iti__tel-input[type=tel] {
+    margin-left: 0;
+    width: 100%;
+    padding: 10px 10px 10px 55px;
+    border: 1px solid #bdbdbd;
+    outline-color: #d7d7d7;
+}
+
+@media(max-width:1199px) {
+    .iti--allow-dropdown input.iti__tel-input,
+    .iti--allow-dropdown input.iti__tel-input[type=text],
+    .iti--allow-dropdown input.iti__tel-input[type=tel] {
+        width: 96%;
+    }
+}
