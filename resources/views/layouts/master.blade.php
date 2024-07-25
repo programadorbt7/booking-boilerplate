@@ -250,12 +250,12 @@
                                     <li class="dropdown">
                                         <a>Circuitos</a>
                                         <ul class="sub-menu">
-                                                <li>
+                                                {{-- <li>
                                                     <a aria-label="Ver todas las ofertas"
                                                         href="/ofertas-megatravel">
                                                         Ver todas las ofertas
                                                     </a>
-                                                </li>
+                                                </li> --}}
                                             @foreach ($megaTravel as $mgTravel)
                                                 <li>
                                                     <a aria-label="Circuitos en {{ $mgTravel['nombre'] }}"
