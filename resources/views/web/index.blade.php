@@ -16,10 +16,26 @@
     {{-- SLIDER & MOTOR --}}
     <section class="main-slider-one">
         <div class="main-slider-one__carousel trevlo-owl__carousel owl-carousel owl-theme">
-            @foreach ($slider as $x => $image)
+            @if($slider != null)
+                @foreach ($slider as $x => $image)
+                    <div class="item">
+                        <div class="main-slider-one__image"
+                            style="background-image: url(https://app.bookingtrap.com/public/storage/{{ $image['archivo'] }});">
+                        </div>
+                        <div class="container">
+                            <div class="main-slider-one__content">
+                                <h5 class="main-slider-one__sub-title">Viajes y tours <img
+                                        src="assets/images/shapes/slider-1-shape-1.png" alt="trevlo"></h5>
+                                <h3 class="main-slider-one__title">Explora el mundo<img
+                                        src="assets/images/shapes/slider-1-shape-2.png" alt="trevlo"></h3>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            @else 
                 <div class="item">
                     <div class="main-slider-one__image"
-                        style="background-image: url(https://app.bookingtrap.com/public/storage/{{ $image['archivo'] }});">
+                        style="background-image: url({{ asset('cucapah/img/experiencias1.webp') }});">
                     </div>
                     <div class="container">
                         <div class="main-slider-one__content">
@@ -30,7 +46,7 @@
                         </div>
                     </div>
                 </div>
-            @endforeach
+            @endif
         </div>
         {{-- MOTOR --}}
         @include('web.partials.miMotor')
