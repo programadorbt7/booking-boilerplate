@@ -94,4 +94,4 @@ Route::get('/sitemap.xml',                   [SiteMapController::class, 'index']
 //Exclusivo uso para TravelCit
 // Route::get('/tiposexperiencias/{categoriaEx}/{idEx}',[SitioWebController::class, 'categoriasExcursionesUnica'])   ->name('tiposexperiencias.categoriaEx.idEx');
 
-// Route::get('/ofertas-megatravel',                             function(){ return view("web.ofertasMegatravel"); });
+Route::get('/ofertas-megatravel',                             function(){ return view("web.ofertasMegatravel"); });
