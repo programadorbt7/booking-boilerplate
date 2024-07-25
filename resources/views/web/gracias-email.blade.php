@@ -26,8 +26,8 @@
                 <div class="col-xl-7 col-lg-6 wow animated fadeInRight" data-wow-delay="0.1s" data-wow-duration="1500ms">
                     <div class="offer-one__img-box">
                         <div class="offer-one__inner-img-box">
-                            <img src="{{ asset('assets/images/offer/offer-1-1.jpg') }}" alt="offer"
-                                class="offer-one__img-one">
+                            {{-- <img src="{{ asset('assets/images/offer/offer-1-1.jpg') }}" alt="offer"
+                                class="offer-one__img-one"> --}}
                             <img src="{{ asset('assets/images/offer/offer-1-2.jpg') }}" alt="offer"
                                 class="offer-one__img-two">
                         </div>
