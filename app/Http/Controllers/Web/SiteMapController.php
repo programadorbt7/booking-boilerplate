@@ -281,10 +281,10 @@ class Url
         // $frequency = 'monthly';
         // $priority = '1.00';
         return "<url>" .
-            "<loc>$this->url</loc>" .
-            "<lastmod>$this->lastUpdate</lastmod>" .
-            "<changefreq>$this->frequency</changefreq>" .
-            "<priority>$this->priority</priority>" .
+            "<loc>".htmlspecialchars($this->url)."</loc>" .
+            "<lastmod>".htmlspecialchars($this->lastUpdate)."</lastmod>" .
+            "<changefreq>".htmlspecialchars($this->frequency)."</changefreq>" .
+            "<priority>".htmlspecialchars($this->priority)."</priority>" .
         "</url>";
     }
 }
