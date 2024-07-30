@@ -3,9 +3,9 @@
 @section('metaSEO')
     <title>Preguntas Frecuentes - {{ $nameEnterprise }}</title>
     <meta name="description"
-        content="Contacta con nosotros mediante nuestro formulario de contacto para cualquier duda o pregunta a cerca de nuestros tours. Nos pondremos en contacto contigo lo más antes posible Funtastic.">
+        content="Contacta con nosotros mediante nuestro formulario de contacto para cualquier duda o pregunta a cerca de nuestros tours. Nos pondremos en contacto contigo lo más antes posible Cucapah.">
     <meta name="keywords"
-        content="Contacto, Comunicarte, Atención, Comunicate, Envia un Correo, Mensaje, Clientes, Usuarios, Agencia, Funtastic">
+        content="Contacto, Comunicarte, Atención, Comunicate, Envia un Correo, Mensaje, Clientes, Usuarios, Agencia, Cucapah">
 @endsection
 
 @section('contenido-principal')

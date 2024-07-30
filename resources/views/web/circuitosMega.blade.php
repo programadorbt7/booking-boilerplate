@@ -36,7 +36,7 @@
                                 data-wow-delay="0.1s" data-wow-duration="1500ms">
                                 <h4 class="sidebar-blog__title text-center">
                                     <img style="width: 150px" src="{{ asset('cucapah/img/logo-cucapah-mobile.webp') }}"
-                                        alt="Logo Funtastic">
+                                        alt="Logo Cucapah">
                                 </h4>
                                 <ul class="sidebar-blog__posts ">
                                     @if ($sitioweb[0]->email_publico != '')

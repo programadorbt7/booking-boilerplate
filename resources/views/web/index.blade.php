@@ -7,9 +7,9 @@
 @section('metaSEO')
     <title>Inicio - {{ $nameEnterprise }}</title>
     <meta name="description"
-        content="Funtastic es una agencia de viajes caracterizada por el buen servicio y oferta de productos turisticos de calidad en diversos destinos, estamos comprometidos con cumplir los sueños de viaje de nuestros clientes.">
+        content="Cucapah es una agencia de viajes caracterizada por el buen servicio y oferta de productos turisticos de calidad en diversos destinos, estamos comprometidos con cumplir los sueños de viaje de nuestros clientes.">
     <meta name="keywords"
-        content="Agencias, Agencias viajes, Viajes, Tours, Niños, Adultos, Experiencias, Visitas, Paquetes Turisticos, Turismo, Vuelos, Ciudades, Lugares, Residencias, Hoteles, Playas, Funtastic">
+        content="Agencias, Agencias viajes, Viajes, Tours, Niños, Adultos, Experiencias, Visitas, Paquetes Turisticos, Turismo, Vuelos, Ciudades, Lugares, Residencias, Hoteles, Playas, Cucapah">
 @endsection
 
 @section('contenido-principal')
@@ -596,7 +596,7 @@
                                             <div class="blog-card-two__meta">
                                                 <div class="blog-card-two__author">
                                                     <img src="{{ asset('cucapah/img/logo-cucapah.png') }}"
-                                                        alt="User blog Funtastic">
+                                                        alt="User blog Cucapah">
                                                     <h5 class="blog-card-two__author__name">
                                                         <a aria-label="Leer más de {{ $blog['titulo'] }}"
                                                             href="/blog/articulo/{{ $fn->stringToUrl($blog['titulo']) }}/{{ $blog['id'] }}">

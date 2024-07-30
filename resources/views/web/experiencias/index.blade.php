@@ -10,7 +10,7 @@
     <meta name="description"
         content="Experiencias inolvidables por siempre únicas, conoce todas nuestras experiencias que tenemos para ofrecerte a ti y disfruta de cada momento de ellas.">
     <meta name="keywords"
-        content="Viajes, Experiencias, Personas, Parques, Lugares, Entidades, Personas, Reserva, Tour, Aventura, Playas, Turismo, Visitas, Funtastic">
+        content="Viajes, Experiencias, Personas, Parques, Lugares, Entidades, Personas, Reserva, Tour, Aventura, Playas, Turismo, Visitas, Cucapah">
 @endsection
 
 @section('contenido-principal')

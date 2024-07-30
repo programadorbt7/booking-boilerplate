@@ -116,7 +116,7 @@
 }
 
 .imgHeaderHome {
-    height: 93px !important;
+    height: 103px !important;
     width: auto !important;
 }
 
@@ -227,4 +227,15 @@
     background: #fff;
     padding: 5px;
     border-radius: 15px 0;
+}
+
+.main-footer__logo {
+    height: 110px;
+}
+
+@media (max-width: 1199px) {
+    .main-header__inner {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 }

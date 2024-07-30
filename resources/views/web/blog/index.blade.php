@@ -77,7 +77,7 @@
                                                 <div class="blog-card-two__meta">
                                                     <div class="blog-card-two__author">
                                                         <img src="{{ asset('cucapah/img/logo-cucapah.png') }}"
-                                                            alt="User blog Funtastic">
+                                                            alt="User blog Cucapah">
                                                         <h5 class="blog-card-two__author__name">
                                                             <a aria-label="Leer más de {{ $blog['titulo'] }}"
                                                                 href="/blog/articulo/{{ $fn->stringToUrl($blog['titulo']) }}/{{ $blog['id'] }}">

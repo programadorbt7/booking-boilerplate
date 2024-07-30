@@ -3,9 +3,9 @@
 @section('metaSEO')
     <title>Contacto - {{ $nameEnterprise }}</title>
     <meta name="description"
-        content="Contacta con nosotros mediante nuestro formulario de contacto para cualquier duda o pregunta a cerca de nuestros tours. Nos pondremos en contacto contigo lo más antes posible Funtastic.">
+        content="Contacta con nosotros mediante nuestro formulario de contacto para cualquier duda o pregunta a cerca de nuestros tours. Nos pondremos en contacto contigo lo más antes posible Cucapah.">
     <meta name="keywords"
-        content="Contacto, Comunicarte, Atención, Comunicate, Envia un Correo, Mensaje, Clientes, Usuarios, Agencia, Funtastic">
+        content="Contacto, Comunicarte, Atención, Comunicate, Envia un Correo, Mensaje, Clientes, Usuarios, Agencia, Cucapah">
 @endsection
 
 @section('contenido-principal')
@@ -38,7 +38,7 @@
                                 data-wow-delay="0.1s" data-wow-duration="1500ms" style="padding: 10px">
                                 <h4 class="sidebar-blog__title text-center">
                                     <img style="width: 150px" src="{{ asset('cucapah/img/logo-cucapah.png') }}"
-                                        alt="Logo Funtastic">
+                                        alt="Logo Cucapah">
                                 </h4>
                                 <ul class="sidebar-blog__posts ">
                                     @if ($sitioweb[0]->email_publico != '')

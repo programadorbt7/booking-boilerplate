@@ -3,7 +3,7 @@
 @section('metaSEO')
     <title>Galería - {{ $nameEnterprise }}</title>
     <meta name="description"
-        content="Funtastic visualiza todos las fotos de nuestros mejores tours y experiencias que tenemos para ofrecerte a para ti aqui mismo">
+        content="Cucapah visualiza todos las fotos de nuestros mejores tours y experiencias que tenemos para ofrecerte a para ti aqui mismo">
     <meta name="keywords" content="Galería">
 @endsection
 

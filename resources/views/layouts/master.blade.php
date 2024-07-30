@@ -28,7 +28,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="{{ asset('assets/images/favicons/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
-    {{-- FONT FUNTASTIC --}}
+    {{-- FONT Cucapah --}}
     <link href="https://fonts.cdnfonts.com/css/metropolis-2" rel="stylesheet">
     {{-- FONT AWESOME --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -223,7 +223,7 @@
                         <div class="main-header__logo">
                             <a href="/">
                                 <img src="{{ asset('cucapah/img/logo-cucapah.png') }}"
-                                    alt="Logo Funtastic" width="146" class="imgHeaderHome">
+                                    alt="Logo Cucapah" width="146" class="imgHeaderHome">
                             </a>
                         </div>
                         {{-- NAV MENU --}}
@@ -340,7 +340,7 @@
                         <div class="main-footer__logo-box d-flex justify-content-center">
                             <a href="/" aria-label="Inicio" class="hrefImgLogoFooter">
                                 <img src="{{ asset('cucapah/img/logo-cucapah.png') }}"
-                                    alt="logo funtastic" class="main-footer__logo">
+                                    alt="logo Cucapah" class="main-footer__logo">
                             </a>
                         </div>
                     </div>
@@ -513,7 +513,7 @@
             <div class="logo-box">
                 <a href="/" aria-label="logo image" class="logoMobile"><img
                         src="{{ asset('cucapah/img/logo-cucapah-mobile.webp') }}" width="155"
-                        alt="Logo Funtastic" /></a>
+                        alt="Logo Cucapah" /></a>
             </div>
             <div class="mobile-nav__container"></div>
             {{-- Correo & Numero --}}
