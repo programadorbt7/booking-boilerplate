@@ -259,7 +259,7 @@
                                             @foreach ($megaTravel as $mgTravel)
                                                 <li>
                                                     <a aria-label="Circuitos en {{ $mgTravel['nombre'] }}"
-                                                        href="{{ route('circuitosTuristicos.entidad.entidad2.id', ['entidad' => $fn->reemplaza_espacios($mgTravel['nombre']), 'entidad2' => urlencode($mgTravel['nombre']), 'id' => $mgTravel['id_destino']]) }}">
+                                                        href="{{ route('circuitosTuristicos.entidad.entidad2.id', ['entidad' => $fn->stringToUrl($mgTravel['nombre']), 'entidad2' => $fn->stringToUrl($mgTravel['nombre']), 'id' => $mgTravel['id_destino']]) }}">
                                                         {{ $mgTravel['nombre'] }}
                                                     </a>
                                                 </li>

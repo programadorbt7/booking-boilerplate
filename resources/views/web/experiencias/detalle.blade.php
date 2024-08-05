@@ -9,6 +9,7 @@
     <title>{{ $tour['paquete'][0]['nombre'] }} - {{ $nameEnterprise }}</title>
     <meta name="description" content="{{ $tour['paquete'][0]['descripcion_sitio'] }}">
     <meta name="keywords" content="{{ $tour['paquete'][0]['keywords_sitio'] }}">
+    <link rel="canonical" href="{{ request()->url() }}"/>
 @endsection
 
 @section('contenido-principal')

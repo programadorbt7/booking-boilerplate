@@ -527,7 +527,7 @@
                                                         class="destination-two__card-img destination-two__card-img--circle">
                                                     <div class="destination-two__card-btn">
                                                         <a aria-label="Ir a circuitos en {{ $circuitoUni['nombre'] }}"
-                                                            href="{{ route('circuitosTuristicos.entidad.entidad2.id', ['entidad' => $fn->reemplaza_espacios($circuitoUni['nombre']), 'entidad2' => urlencode($circuitoUni['nombre']), 'id' => $circuitoUni['id_destino']]) }}"
+                                                            href="{{ route('circuitosTuristicos.entidad.entidad2.id', ['entidad' => $fn->stringToUrl($circuitoUni['nombre']), 'entidad2' => $fn->stringToUrl($circuitoUni['nombre']), 'id' => $circuitoUni['id_destino']]) }}"
                                                             class="trevlo-btn trevlo-btn--base-three">
                                                             <span>Ver Destino</span>
                                                         </a>
@@ -536,7 +536,7 @@
                                                 <div class="destination-two__card-title-box">
                                                     <h4 class="destination-two__card-title">
                                                         <aaria-label="Ir a circuitos en {{ $circuitoUni['nombre'] }}"
-                                                        href="{{ route('circuitosTuristicos.entidad.entidad2.id', ['entidad' => $fn->reemplaza_espacios($circuitoUni['nombre']), 'entidad2' => urlencode($circuitoUni['nombre']), 'id' => $circuitoUni['id_destino']]) }}">
+                                                        href="{{ route('circuitosTuristicos.entidad.entidad2.id', ['entidad' => $fn->stringToUrl($circuitoUni['nombre']), 'entidad2' => $fn->stringToUrl($circuitoUni['nombre']), 'id' => $circuitoUni['id_destino']]) }}">
                                                         {{ $circuitoUni['nombre'] }}
                                                         </a>
                                                     </h4>

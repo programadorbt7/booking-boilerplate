@@ -155,9 +155,18 @@ class FnController extends Controller
     public function stringToUrl($string)
     {
         //Rememplazamos caracteres especiales latinos 
-        $find = array('á', 'é', 'í', 'ó', 'ú', 'ñ', ' ');
-        $repl = array('a', 'e', 'i', 'o', 'u', 'n', '-');
-        $cadena = str_replace($find, $repl, $string);
+        $stringlower = mb_strtolower($string);
+        $findA = array('-');
+        $replA = array('');
+        $cadena = str_replace($findA, $replA, $stringlower);
+
+        $find = array('á', 'é', 'í', 'ó', 'ú', 'ñ', ' ', "+", ":", "(", ")", ",");
+        $repl = array('a', 'e', 'i', 'o', 'u', 'n', '-', '', '', '', '', '');
+        $cadena = str_replace($find, $repl, $cadena);
+
+        $patterns[0] = '/--/';
+        $replacements[0] = '-';
+        $cadena = preg_replace($patterns, $replacements, $cadena);
 
         return $this->minusculas($cadena);
     }
@@ -459,5 +468,29 @@ class FnController extends Controller
             }
         }
         return $conteo;
+    }
+
+    public function ordena_objetos ( $array_de_objetos, $propiedad_a_considerar, $orden_ascendente=TRUE ) {
+        $a_ordenar  = array();
+        $resultado  = array();
+
+        foreach ($array_de_objetos as $i => $objeto) {
+            $a_ordenar[$i] = $objeto[$propiedad_a_considerar];
+        }
+
+        asort($a_ordenar);
+    
+        foreach ($a_ordenar as $i => $valor) {
+            $resultado[] = $array_de_objetos[$i];
+        }
+
+        return ($orden_ascendente) ? $resultado : array_reverse($resultado);
+    }
+    
+    public function capitalizeCadena($texto) {
+        $cadena         = $texto;
+        $minusculas     = mb_strtolower($cadena);
+        $capitalized    = ucfirst($minusculas);
+        return $capitalized;
     }
 }

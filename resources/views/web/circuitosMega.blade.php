@@ -13,7 +13,7 @@
             style="background-image: url({{ asset('cucapah/img/mega.webp') }})"></div>
         <div class="container">
             <h2 class="page-header__title wow animated fadeInLeft" data-wow-delay="0s" data-wow-duration="1500ms">
-                Circuitos en <span>{{ urldecode($nombre) }}</span>
+                Circuitos en <span>{{ (str_replace(["-"], " ", $nombre )) }}</span>
             </h2>
             <div class="page-header__breadcrumb-box">
                 <ul class="trevlo-breadcrumb">
@@ -98,7 +98,7 @@
                 {{-- FORM --}}
                 <div class="col-xl-8 col-lg-7 pb-5">
                     <div class="sec-title text-center">
-                        <p class="sec-title__tagline">{{ urldecode($nombre) }}</p>
+                        <p class="sec-title__tagline">{{ (str_replace(["-"], " ", $nombre )) }}</p>
                     </div>
                     <iframe src="{{ $imagen }}" frameborder="0" style="min-height: 500px; width: 100%"></iframe>
                 </div>
