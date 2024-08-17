@@ -37,7 +37,7 @@
                             <div class="sidebar-blog__single sidebar-blog__single--posts wow animated fadeInUp"
                                 data-wow-delay="0.1s" data-wow-duration="1500ms" style="padding: 10px">
                                 <h4 class="sidebar-blog__title text-center">
-                                    <img style="width: 150px" src="{{ asset('cucapah/img/logo-cucapah.png') }}"
+                                    <img style="width: 150px; margin-top: 25px;" src="{{ asset('angie/img/logo.png') }}"
                                         alt="Logo Cucapah">
                                 </h4>
                                 <ul class="sidebar-blog__posts ">

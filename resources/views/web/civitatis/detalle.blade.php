@@ -48,21 +48,31 @@
                     <div class="col-xl-12 wow animated fadeInLeft" data-wow-delay="0.1s" data-wow-duration="1500ms">
                         <div class="tour-listing-details__destination-left text-center">
                             <h3 class="tour-listing-details__dastination-title">{{ $title }}</h3>
-                            <h4 class="tour-listing-details__dastination-price">
+                            {{-- <h4 class="tour-listing-details__dastination-price">
                                 <span>$ {{ $fn->tarifaPublicaAgenciasTours($minimumPrice, $markup) }}
                                     {{ $monedaSeleccionada }}</span>
-                                <span class="tour-listing-details__dastination-person">/ Por persona</span>
-                            </h4>
+                                <span class="tour-listing-details__dastination-person" style="color: var(--colorQuintoPalete);">/ Por persona</span>
+                            </h4> --}}
                         </div>
                     </div>
                     {{-- INFO GENERAL --}}
                     <div class="col-xl-12">
-                        <div class="tour-listing-details__destination-right  justify-center-text">
+                        <div class="tour-listing-details__destination-right justify-center-text">
                             {{-- DURACION --}}
                             <div class="tour-listing-details__destination-info wow animated fadeInUp" data-wow-delay="0.1s"
                                 data-wow-duration="1500ms">
-                                <span class="icon-clock-1"></span>
-                                <div class="tour-listing-details__destination-info-title">
+                                <span class="fa-solid fa-dollar-sign fzIcon"></span>
+                                <div class="tour-listing-details__destination-info-title text-center">
+                                    <h4 class="tour-listing-details__destination-info-top">Desde</h4>
+                                    <h4 class="tour-listing-details__destination-info-bottom">
+                                        $ {{ $fn->tarifaPublicaAgenciasTours($minimumPrice, $markup) }} {{ $monedaSeleccionada }} <br>Por persona
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="tour-listing-details__destination-info wow animated fadeInUp" data-wow-delay="0.1s"
+                                data-wow-duration="1500ms">
+                                <span class="icon-clock-1 fzIcon"></span>
+                                <div class="tour-listing-details__destination-info-title text-center">
                                     <h4 class="tour-listing-details__destination-info-top">Duración</h4>
                                     <h4 class="tour-listing-details__destination-info-bottom">
                                         {{ ceil($duracionTour / 60) }}
@@ -73,8 +83,8 @@
                             {{-- RESEÑAS --}}
                             <div class="tour-listing-details__destination-info wow animated fadeInUp" data-wow-delay="0.3s"
                                 data-wow-duration="1500ms">
-                                <span class="icon-Duration"></span>
-                                <div class="tour-listing-details__destination-info-title">
+                                <span class="icon-Duration fzIcon"></span>
+                                <div class="tour-listing-details__destination-info-title text-center">
                                     <h4 class="tour-listing-details__destination-info-top">Reseñas</h4>
                                     <h4 class="tour-listing-details__destination-info-bottom">
                                         {{ $reviews }} {{ $reviews > 1 ? 'Reseñas' : 'Reseña' }}
@@ -84,17 +94,17 @@
                             {{-- CATEGORIA --}}
                             <div class="tour-listing-details__destination-info wow animated fadeInUp" data-wow-delay="0.5s"
                                 data-wow-duration="1500ms">
-                                <span class="icon-hiking-1"></span>
-                                <div class="tour-listing-details__destination-info-title">
+                                <span class="icon-hiking-1 fzIcon"></span>
+                                <div class="tour-listing-details__destination-info-title text-center">
                                     <h4 class="tour-listing-details__destination-info-top">Categoría</h4>
-                                    <h4 class="tour-listing-details__destination-info-bottom">{{ $categoriaUnica }}</h4>
+                                    <h4 class="tour-listing-details__destination-info-bottom txtUbicacion">{{ $categoriaUnica }}</h4>
                                 </div>
                             </div>
                             {{-- CALIFICACION --}}
                             <div class="tour-listing-details__destination-info wow animated fadeInUp" data-wow-delay="0.7s"
                                 data-wow-duration="1500ms">
-                                <span class="icon-star"></span>
-                                <div class="tour-listing-details__destination-info-title">
+                                <span class="icon-star fzIcon"></span>
+                                <div class="tour-listing-details__destination-info-title text-center">
                                     <h4 class="tour-listing-details__destination-info-top">Calificación</h4>
                                     <h4 class="tour-listing-details__destination-info-bottom">
                                         {{ $score < 5 ? '8' : $score }}/10
@@ -349,6 +359,10 @@
         }
 
         .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next{margin-top: 15px !important;}
+
+        .tour-listing-details__destination-info {
+            flex-direction: column;
+        }
     </style>
 @endsection
 
