@@ -604,7 +604,7 @@
     @endif
 
     <section>
-        <section class="faq-section py-5" style="background: linear-gradient(#00000042, #00000057), url({{ asset('angie/img/faq.webp') }}) center center; background-attachment: fixed; background-repeat: no-repeat;">
+        <section class="faq-section py-5" style="background: linear-gradient(#00000042, #00000057), url({{ asset('angie/img/faq.webp') }}) center center; background-attachment: fixed; background-repeat: no-repeat; background-size: cover;">
             <div class="container">
         
               <div class="w-lg-50 mx-auto">
