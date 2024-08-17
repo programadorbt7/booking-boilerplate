@@ -12,7 +12,7 @@
     {{-- BANNER --}}
     <section class="page-header">
         <div class="page-header__bg"
-            style="background-image: url({{ asset('cucapah/img/contacto.webp') }})"></div>
+            style="background-image: url({{ asset('angie/img/banners/contacto.webp') }})"></div>
         <div class="container">
             <h2 class="page-header__title wow animated fadeInLeft" data-wow-delay="0s" data-wow-duration="1500ms">
                 Contáctanos

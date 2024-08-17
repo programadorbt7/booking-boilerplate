@@ -10,7 +10,7 @@
 @section('contenido-principal')
     {{-- BANNER --}}
     <section class="page-header">
-        <div class="page-header__bg" style="background-image: url({{ asset('cucapah/img/terminos1.webp') }})">
+        <div class="page-header__bg" style="background-image: url({{ asset('angie/img/banners/terminos.webp') }})">
         </div>
         <div class="container">
             <h2 class="page-header__title wow animated fadeInLeft" data-wow-delay="0s" data-wow-duration="1500ms">Términos y

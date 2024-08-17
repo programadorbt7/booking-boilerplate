@@ -82,11 +82,11 @@
 }
 
 .main-footer {
-    background-color: var(--colorBackground);
+    background-color: var(--colorBackgroundPalete);
 }
 
 .main-footer__bottom {
-    background-color: var(--colorBackground);
+    background-color: var(--colorBackgroundPalete);
 }
 
 .pricing-card__overlay {
@@ -166,11 +166,11 @@
 }
 
 .blog-card-two__title a:hover {
-    color: var(--colorTercero);
+    color: var(--colorTerceroPalete);
 }
 
 .blog-card-two__author__name a:hover {
-    color: var(--colorTercero);
+    color: var(--colorTerceroPalete);
 }
 
 #currency {

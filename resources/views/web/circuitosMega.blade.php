@@ -10,7 +10,7 @@
     {{-- BANNER --}}
     <section class="page-header">
         <div class="page-header__bg"
-            style="background-image: url({{ asset('cucapah/img/mega.webp') }})"></div>
+            style="background-image: url({{ asset('angie/img/banners/megatravel.webp') }})"></div>
         <div class="container">
             <h2 class="page-header__title wow animated fadeInLeft" data-wow-delay="0s" data-wow-duration="1500ms">
                 Circuitos en <span>{{ (str_replace(["-"], " ", $nombre )) }}</span>

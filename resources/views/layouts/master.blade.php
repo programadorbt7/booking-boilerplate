@@ -53,6 +53,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/stylesTransportacionListDaniel.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('cucapah/css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('angie/css/main.css') }}">
     <style>
         #whatsapp-float {
             display: block;
@@ -101,7 +102,7 @@
     <div class="preloader">
         <div class="loader-svg-img">
             <img alt="favicon" loading="lazy" class="img-preloader"
-                src="{{ asset('cucapah/img/logo-cucapah.png') }}" style="width: 120px">
+                src="{{ asset('angie/img/logo.png') }}" style="width: 120px">
             <div class="flight-icon"><i aria-hidden="true" class="fa fa-plane"
                     style="transform: rotate(-70deg)"></i></div>
         </div>
@@ -117,11 +118,11 @@
     {{-- MAIN --}}
     <div class="page-wrapper">
         {{-- NAV TOP --}}
-        <div class="topbar-one">
+        <div class="topbar-one newNavbar">
             <div class="topbar-one__contaner container-fluid">
-                <div class="topbar-one__inner">
+                {{-- <div class="topbar-one__inner"> --}}
                     {{-- INFO EMPRESA --}}
-                    <div class="topbar-one__left">
+                    {{-- <div class="topbar-one__left">
                         <ul class="topbar-one__info">
                             <li class="topbar-one__info-item">
                                 <span class="topbar-one__info-icon icon-location-1"></span>
@@ -141,9 +142,9 @@
                                 </li>
                             @endif
                         </ul>
-                    </div>
+                    </div> --}}
                     {{-- SOCIAL MEDIA --}}
-                    <div class="topbar-one__right">
+                    {{-- <div class="topbar-one__right">
                         <ul class="topbar-one__social">
                             @if ($sitioweb[0]->whatsapp != '')
                                 <li class="topbar-one__social-item">
@@ -209,6 +210,112 @@
                                 </li>
                             @endif
                         </ul>
+                    </div> --}}
+                {{-- </div> --}}
+                <div class="container">
+                    <div class="d-flex">
+                        <div class="col-sm-6">
+                            <img class="imgLogoMenu" src="{{ asset('angie/img/logo.png') }}" alt="{{ $nameEnterprise }}">
+                        </div>
+                        <div class="col-sm-6 contentInfoData">
+                            <div style="display: grid; grid-template-columns: repeat(1, 1fr);">
+                                
+                                    <div class="">
+                                        <ul class="topbar-one__social listIconRed">
+                                            @if ($sitioweb[0]->whatsapp != '')
+                                                <li class="topbar-one__social-item">
+                                                    <a class="topbar-one__social-link" aria-label="Whatsapp" target="_blank"
+                                                        href="https://wa.me/{{ $sitioweb[0]->whatsapp }}?text=Estoy interesada(o) en un tour"><i
+                                                            class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+                                                </li>
+                                            @endif
+                                            @if ($sitioweb[0]->facebook != '')
+                                                <li class="topbar-one__social-item">
+                                                    <a class="topbar-one__social-link" aria-label="Facebook"
+                                                        href="{{ $sitioweb[0]->facebook }}" target="_blank">
+                                                        <i aria-hidden="true" class="fab fa-facebook-f" aria-hidden="true"></i>
+                                                    </a>
+                                                </li>
+                                            @endif
+                                            @if ($sitioweb[0]->twitter != '')
+                                                <li class="topbar-one__social-item">
+                                                    <a class="topbar-one__social-link" aria-label="twitter"
+                                                        href="{{ $sitioweb[0]->twitter }}" target="_blank">
+                                                        <i aria-hidden="true" class="fab fa-twitter" aria-hidden="true"></i>
+                                                    </a>
+                                                </li>
+                                            @endif
+                                            @if ($sitioweb[0]->instagram != '')
+                                                <li class="topbar-one__social-item">
+                                                    <a class="topbar-one__social-link" aria-label="instagram"
+                                                        href="{{ $sitioweb[0]->instagram }}" target="_blank">
+                                                        <i aria-hidden="true" class="fab fa-instagram" aria-hidden="true"></i>
+                                                    </a>
+                                                </li>
+                                            @endif
+                                            @if ($sitioweb[0]->tiktok != '')
+                                                <li class="topbar-one__social-item">
+                                                    <a class="topbar-one__social-link" aria-label="tiktok"
+                                                        href="{{ $sitioweb[0]->tiktok }}" target="_blank">
+                                                        <i aria-hidden="true" class="fab fa-tiktok" aria-hidden="true"></i>
+                                                    </a>
+                                                </li>
+                                            @endif
+                                            @if ($sitioweb[0]->pinterest != '')
+                                                <li class="topbar-one__social-item">
+                                                    <a class="topbar-one__social-link" aria-label="pinterest"
+                                                        href="{{ $sitioweb[0]->pinterest }}" target="_blank">
+                                                        <i aria-hidden="true" class="fab fa-pinterest-p" aria-hidden="true"></i>
+                                                    </a>
+                                                </li>
+                                            @endif
+                                            @if ($sitioweb[0]->youtube != '')
+                                                <li class="topbar-one__social-item">
+                                                    <a class="topbar-one__social-link" aria-label="youtube"
+                                                        href="{{ $sitioweb[0]->youtube }}" target="_blank">
+                                                        <i aria-hidden="true" class="fab fa-youtube" aria-hidden="true"></i>
+                                                    </a>
+                                                </li>
+                                            @endif
+                                            @if ($sitioweb[0]->linkedin != '')
+                                                <li class="topbar-one__social-item">
+                                                    <a class="topbar-one__social-link" aria-label="linkedin"
+                                                        href="{{ $sitioweb[0]->linkedin }}" target="_blank">
+                                                        <i aria-hidden="true" class="fab fa-linkedin" aria-hidden="true"></i>
+                                                    </a>
+                                                </li>
+                                            @endif
+                                        </ul>
+                                    </div>
+                            </div>
+                            <div class="flexData">
+                                <div class="">
+                                    @if ($sitioweb[0]->telefono != '')
+                                        <li class="topbar-one__info-item alinearElementosData">
+                                            <span class="topbar-one__info-icon fa-solid fa-phone-volume ftsizeIcon"></span>
+                                            <a aria-label="Número Telefónico" class="ftsizeIconText" href="tel:{{ $sitioweb[0]->telefono }}">{{ $sitioweb[0]->telefono }}</a>
+                                        </li>
+                                    @endif
+                                </div>
+                                <div class="">
+                                    @if ($sitioweb[0]->email_publico != '')
+                                        <li class="topbar-one__info-item alinearElementosData">
+                                            <span class="topbar-one__info-icon icon-envelope ftsizeIcon"></span>
+                                            <a href="mailto:{{ $sitioweb[0]->email_publico }}"
+                                                class="topbar-one__info-text ftsizeIconText">{{ $sitioweb[0]->email_publico }}</a>
+                                        </li>
+                                    @endif
+                                </div>
+                                <div class="">
+                                    @if ($sitioweb[0]->horario_atencion != '')
+                                        <li class="topbar-one__info-item alinearElementosData">
+                                            <span class="topbar-one__info-icon icon-clock-1 ftsizeIcon"></span>
+                                            <span class="topbar-one__info-text ftsizeIconText"> {{ $sitioweb[0]->horario_atencion }}</span>
+                                        </li>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -216,13 +323,14 @@
         {{-- HEADER --}}
         <header class="main-header sticky-header sticky-header--normal">
             <div class="container">
-                <div class="main-header__inner">
+                
+                <div class="main-header__inner justify-center-div">
                     {{-- NAV GENERAL --}}
                     <div class="main-header__left">
                         {{-- LOGO --}}
                         <div class="main-header__logo">
                             <a href="/">
-                                <img src="{{ asset('cucapah/img/logo-cucapah.png') }}"
+                                <img src="{{ asset('angie/img/logo.png') }}"
                                     alt="Logo Cucapah" width="146" class="imgHeaderHome">
                             </a>
                         </div>
@@ -230,10 +338,18 @@
                         <nav class="main-header__nav main-menu">
                             <ul class="main-menu__list">
                                 <li>
-                                    <a aria-label="Inicio" href="/">Inicio</a>
+                                    <a class="flexIconsMenu" aria-label="Inicio" href="/">
+                                        <span><i class="fa-solid fa-house-chimney"></i></span>
+                                        Inicio
+                                    </a>
                                 </li>
                                 <li class="dropdown">
-                                    <a>Experiencias</a>
+                                    {{-- <div class="flexIconsMenu">
+                                    </div> --}}
+                                    <a class="flexIconsMenu">
+                                        <span><i class="fa-solid fa-torii-gate"></i></span>
+                                        Experiencias
+                                    </a>
                                     <ul class="sub-menu">
                                         <li><a aria-label="Todas las experiencias" href="/experiencias">Todas las
                                                 experiencias</a></li>
@@ -248,7 +364,10 @@
                                 </li>
                                 @if ($megaTravel != null)
                                     <li class="dropdown">
-                                        <a>Circuitos</a>
+                                        <a class="flexIconsMenu">
+                                            <span><i class="fa-solid fa-igloo"></i></span>
+                                            Circuitos
+                                        </a>
                                         <ul class="sub-menu">
                                                 <li>
                                                     <a aria-label="Ver todas las ofertas"
@@ -269,17 +388,29 @@
                                 @endif
                                 @if ($countArticulosRecientes > 0)
                                     <li>
-                                        <a aria-label="Blog" href="/blog">Blog</a>
+                                        <a class="flexIconsMenu" aria-label="Blog" href="/blog">
+                                            <span><i class="fa-solid fa-blog"></i></span>
+                                            Blog
+                                        </a>
                                     </li>
                                 @endif
                                 <li>
-                                    <a aria-label="Galería" href="/galeria">Galería</a>
+                                    <a class="flexIconsMenu" aria-label="Galería" href="/galeria">
+                                        <span><i class="fa-solid fa-camera-retro"></i></span>
+                                        Galería
+                                    </a>
                                 </li>
                                 <li>
-                                    <a aria-label="Nosotros" href="/nosotros">Nosotros</a>
+                                    <a class="flexIconsMenu" aria-label="Nosotros" href="/nosotros">
+                                        <span><i class="fa-solid fa-building"></i></span>
+                                        Nosotros
+                                    </a>
                                 </li>
                                 <li>
-                                    <a aria-label="Contacto" href="/contacto">Contacto</a>
+                                    <a class="flexIconsMenu" aria-label="Contacto" href="/contacto">
+                                        <span><i class="fa-solid fa-address-book"></i></span>
+                                        Contacto
+                                    </a>
                                 </li>
                             </ul>
                         </nav>
@@ -293,7 +424,7 @@
                         </div>
                         {{-- TELEFONO & CURRENCY --}}
                         <div class="main-header__right-right">
-                            @if ($sitioweb[0]->telefono != '')
+                            {{-- @if ($sitioweb[0]->telefono != '')
                                 <div class="main-header__phone">
                                     <div class="main-header__phone-icon">
                                         <span class="icon-phone-1"></span>
@@ -305,7 +436,7 @@
                                         </h4>
                                     </div>
                                 </div>
-                            @endif
+                            @endif --}}
                             <div class="main-header__divider"></div>
                             <ul class="main-header__search-user">
                                 <li class="main-header__search-user-item">
@@ -321,6 +452,7 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
         </header>
 
@@ -339,7 +471,7 @@
                     <div class="col-lg-4 col-sm-12">
                         <div class="main-footer__logo-box d-flex justify-content-center">
                             <a href="/" aria-label="Inicio" class="hrefImgLogoFooter">
-                                <img src="{{ asset('cucapah/img/logo-cucapah.png') }}"
+                                <img src="{{ asset('angie/img/logo.png') }}"
                                     alt="logo Cucapah" class="main-footer__logo">
                             </a>
                         </div>
@@ -510,10 +642,10 @@
         <div class="mobile-nav__content">
             <span class="mobile-nav__close mobile-nav__toggler"><i aria-hidden="true" class="fa fa-times"></i></span>
 
-            <div class="logo-box">
+            <div class="logo-box my-4">
                 <a href="/" aria-label="logo image" class="logoMobile"><img
-                        src="{{ asset('cucapah/img/logo-cucapah-mobile.webp') }}" width="155"
-                        alt="Logo Cucapah" /></a>
+                        src="{{ asset('angie/img/logo.png') }}" width="155"
+                        alt="Logo {{ $nameEnterprise }}" /></a>
             </div>
             <div class="mobile-nav__container"></div>
             {{-- Correo & Numero --}}

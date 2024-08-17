@@ -14,7 +14,7 @@
     {{-- BANNER --}}
     <section class="page-header">
         <div class="page-header__bg"
-            style="background-image: url({{ asset('cucapah/img/categoriablog.webp') }})"></div>
+            style="background-image: url({{ asset('angie/img/banners/blog.webp') }})"></div>
         <div class="container">
             <h2 class="page-header__title wow animated fadeInLeft" data-wow-delay="0s" data-wow-duration="1500ms">
                 Entérate de lo último</h2>
@@ -76,7 +76,7 @@
                                                 </p>
                                                 <div class="blog-card-two__meta">
                                                     <div class="blog-card-two__author">
-                                                        <img src="{{ asset('cucapah/img/logo-cucapah.png') }}"
+                                                        <img src="{{ asset('angie/img/logo.png') }}"
                                                             alt="User blog Cucapah">
                                                         <h5 class="blog-card-two__author__name">
                                                             <a aria-label="Leer más de {{ $blog['titulo'] }}"

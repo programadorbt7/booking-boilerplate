@@ -36,23 +36,33 @@
             <div class="container">
                 <div class="tour-listing-details__destination-row row">
                     {{-- TITLE & PRICE --}}
-                    <div class="col-xl-4 wow animated fadeInLeft" data-wow-delay="0.1s" data-wow-duration="1500ms">
-                        <div class="tour-listing-details__destination-left">
+                    <div class="col-xl-12 wow animated fadeInLeft" data-wow-delay="0.1s" data-wow-duration="1500ms">
+                        <div class="tour-listing-details__destination-left text-center">
                             <h3 class="tour-listing-details__dastination-title">{{ $tour['paquete'][0]['nombre'] }}</h3>
-                            <h4 class="tour-listing-details__dastination-price">
+                            {{-- <h4 class="tour-listing-details__dastination-price">
                                 <span>$ {{ $precioMinimo['precioformato'] }} {{ $precioMinimo['iso'] }}</span>
                                 <span class="tour-listing-details__dastination-person">/ Por persona</span>
-                            </h4>
+                            </h4> --}}
                         </div>
                     </div>
                     {{-- INFO GENERAL --}}
-                    <div class="col-xl-8">
-                        <div class="tour-listing-details__destination-right">
+                    <div class="col-xl-12">
+                        <div class="tour-listing-details__destination-right justify-center-text">
                             {{-- DURACION --}}
                             <div class="tour-listing-details__destination-info wow animated fadeInUp" data-wow-delay="0.1s"
                                 data-wow-duration="1500ms">
-                                <span class="icon-clock-1"></span>
-                                <div class="tour-listing-details__destination-info-title">
+                                <span class="fa-solid fa-dollar-sign fzIcon"></span>
+                                <div class="tour-listing-details__destination-info-title text-center">
+                                    <h4 class="tour-listing-details__destination-info-top">Desde</h4>
+                                    <h4 class="tour-listing-details__destination-info-bottom">
+                                        $ {{ $precioMinimo['precioformato'] }} {{ $precioMinimo['iso'] }} <br>Por persona
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="tour-listing-details__destination-info wow animated fadeInUp" data-wow-delay="0.1s"
+                                data-wow-duration="1500ms">
+                                <span class="icon-clock-1 fzIcon"></span>
+                                <div class="tour-listing-details__destination-info-title text-center">
                                     <h4 class="tour-listing-details__destination-info-top">Duración</h4>
                                     <h4 class="tour-listing-details__destination-info-bottom">
                                         {{ $tour['paquete'][0]['cantidad_dias'] > 1 ? $tour['paquete'][0]['cantidad_dias'] . ($tipoDuracion == 0 ? ' días' : ' horas') : $tour['paquete'][0]['cantidad_dias'] . ($tipoDuracion == 0 ? ' día' : ' hora') }}
@@ -62,8 +72,8 @@
                             {{-- CATEGORIA --}}
                             <div class="tour-listing-details__destination-info wow animated fadeInUp" data-wow-delay="0.3s"
                                 data-wow-duration="1500ms">
-                                <span class="icon-hiking-4"></span>
-                                <div class="tour-listing-details__destination-info-title">
+                                <span class="icon-hiking-4 fzIcon"></span>
+                                <div class="tour-listing-details__destination-info-title text-center">
                                     <h4 class="tour-listing-details__destination-info-top">Categoría</h4>
                                     <h4 class="tour-listing-details__destination-info-bottom">
                                         {{ $tour['paquete'][0]['tipoexcursion'] }}
@@ -73,10 +83,10 @@
                             {{-- CALIFICACION --}}
                             <div class="tour-listing-details__destination-info wow animated fadeInUp" data-wow-delay="0.7s"
                                 data-wow-duration="1500ms">
-                                <span class="icon-star"></span>
-                                <div class="tour-listing-details__destination-info-title">
+                                <span class="fa-solid fa-map-location-dot fzIcon"></span>
+                                <div class="tour-listing-details__destination-info-title text-center">
                                     <h4 class="tour-listing-details__destination-info-top">Ubicación</h4>
-                                    <h4 class="tour-listing-details__destination-info-bottom">
+                                    <h4 class="tour-listing-details__destination-info-bottom txtUbicacion">
                                         {{ $tour['paquete'][0]['ciudad_comercial'] . ', ' . $tour['paquete'][0]['estado_comercial'] }}
                                     </h4>
                                 </div>
@@ -1126,6 +1136,10 @@
         .ui-datepicker .ui-datepicker-prev,
         .ui-datepicker .ui-datepicker-next {
             margin-top: 15px !important;
+        }
+
+        .tour-listing-details__destination-info {
+            flex-direction: column;
         }
     </style>
 @endsection

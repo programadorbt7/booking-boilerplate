@@ -45,8 +45,8 @@
             <div class="container">
                 <div class="tour-listing-details__destination-row row">
                     {{-- TITLE & PRICE --}}
-                    <div class="col-xl-4 wow animated fadeInLeft" data-wow-delay="0.1s" data-wow-duration="1500ms">
-                        <div class="tour-listing-details__destination-left">
+                    <div class="col-xl-12 wow animated fadeInLeft" data-wow-delay="0.1s" data-wow-duration="1500ms">
+                        <div class="tour-listing-details__destination-left text-center">
                             <h3 class="tour-listing-details__dastination-title">{{ $title }}</h3>
                             <h4 class="tour-listing-details__dastination-price">
                                 <span>$ {{ $fn->tarifaPublicaAgenciasTours($minimumPrice, $markup) }}
@@ -56,8 +56,8 @@
                         </div>
                     </div>
                     {{-- INFO GENERAL --}}
-                    <div class="col-xl-8">
-                        <div class="tour-listing-details__destination-right">
+                    <div class="col-xl-12">
+                        <div class="tour-listing-details__destination-right  justify-center-text">
                             {{-- DURACION --}}
                             <div class="tour-listing-details__destination-info wow animated fadeInUp" data-wow-delay="0.1s"
                                 data-wow-duration="1500ms">

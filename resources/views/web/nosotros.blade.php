@@ -9,7 +9,7 @@
 
 @section('contenido-principal')
     <section class="page-header">
-        <div class="page-header__bg" style="background-image: url({{ asset('cucapah/img/nosotros1.webp') }})"></div>
+        <div class="page-header__bg" style="background-image: url({{ asset('angie/img/banners/nosotros.webp') }})"></div>
         <!-- /.page-header__bg -->
         <div class="container">
             <h2 class="page-header__title wow animated fadeInLeft" data-wow-delay="0s" data-wow-duration="1500ms">Nosotros</h2>

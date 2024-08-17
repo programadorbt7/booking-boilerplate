@@ -54,7 +54,7 @@
 
     {{-- PROMOCIONES --}}
     @if (count($promocionesExpress) > 0)
-        <section style="padding-top: 80px !important;"
+        <section style="padding-top: 80px !important; padding-bottom: 80px !important;"
             class="pricing-page pricing-page-slider section-space correcion-pedrito-1 pb-3 promos">
             <div class="container overflow_hiden">
                 {{-- TITULO --}}
@@ -109,6 +109,28 @@
             </div>
         </section>
     @endif
+
+    <section class="informactiva2 py-4 bg-dark-gradient">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <div>
+                        <span>
+                            <i class="fas fa-skiing-nordic iconExtra"></i>
+                        </span>
+                        <span>
+                            Descubre tu próximo destino con nosotros, experiencias únicas a un clic de distancia.
+                        </span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div>
+                        <a class="btn btn-primary contactLink" href="{{ route('contacto') }}">Contactar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     {{-- EXP POP --}}
     @if ($countHomeTours > 0)
@@ -318,47 +340,30 @@
                             </section>
                         @endif -->
 
-    {{-- SECCION EXTRA --}}
-    <section class="benefit-one">
-        <div class="benefit-one__bg"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="benefit-one__content">
-                        <div class="sec-title text-left">
-
-                            <p class="sec-title__tagline">Viaja con los EXPERTOS </p>
-
-                            <h2 class="sec-title__title">Atención personalizada 24/7 por agentes calificados </h2>
-                        </div>
-                        {{-- <h5 class="benefit-one__content__heading">Best ways to enjoy adventures</h5>
-                        <p class="benefit-one__content__text">
-                            There are many variations of passages of Lorem Ipsum simply free text available, but the
-                            majority.
-                        </p> --}}
-                        <div class="benefit-one__box-wrapper">
-                            <div class="benefit-one__box">
-                                <div class="benefit-one__box__icon"><span class="icon-airplane-1"></span></div>
-                                <h3 class="benefit-one__box__title">Reserva ahora y paga después </h3>
-                            </div>
-                            <div class="benefit-one__box">
-                                <div class="benefit-one__box__icon"><span class="icon-ticket-1"></span></div>
-                                <h3 class="benefit-one__box__title">Mejor precio garantizado </h3>
-                            </div>
-                        </div>
-                    </div>
+    <section class="bg-dark-gradient">
+        <div class="container py-5 ide">
+            <div class="contenedorInformativo">
+                <div class="">
+                    <img src="{{ asset('angie/img/logo1.png') }}" alt="{{ $nameEnterprise }}">
+                    <h2>¿Por qué {{ $nameEnterprise }} es diferente?</h2>
                 </div>
-                <div class="col-lg-7">
-                    <div class="benefit-one__image"><img src="{{ asset('assets/images/benefit-1-1.webp') }}"
-                            alt="trevlo">
-                    </div>
-                    <div class="benefit-one__counter">
-                        <div class="benefit-one__counter__icon"><span class="icon-satisfied"></span></div>
-                        <!-- /.counter__icon -->
-                        <div class="benefit-one__counter__number count-box"><span class="count-text" data-stop="3800"
-                                data-speed="1500"></span> </div><!-- /.counter__number -->
-                        <p class="benefit-one__counter__title">Clientes satisfechos</p><!-- /.counter__title -->
-                    </div>
+                <div class="itemsAliningItems">
+                    <span>
+                        <i class="fas fa-mosque"></i>
+                    </span>
+                    <h2 class="text-center">Es una agencia de viajes dedicada a diseñar experiencias únicas e inolvidables. Ofrecemos itinerarios personalizados que combinan aventura, cultura y confort, para transformar cada viaje en una experiencia de vida.</h2>
+                </div>
+                <div class="itemsAliningItems">
+                    <span><i class="fas fa-compress-arrows-alt"></i></span>
+                    <h2 class="text-center">Ofreciendo momentos memorables que enriquecen y redefinen tu concepto de explorar el mundo.</h2>
+                </div>
+                <div class="itemsAliningItems">
+                    <span><i class="far fa-lightbulb"></i></span>
+                    <h2 class="text-center">Diseñamos experiencias de viaje que van más allá de lo convencional para ti.</h2>
+                </div>
+                <div class="itemsAliningItems">
+                    <span><i class="fas fa-vihara"></i></span>
+                    <h2 class="text-center">Se especializa en construir aventuras únicas, con viajes a medida que convierten cada destino en una historia personal y vibrante.</h2>
                 </div>
             </div>
         </div>
@@ -442,7 +447,52 @@
         </section>
     @endif
 
+    {{-- SECCION EXTRA --}}
+    <section class="benefit-one">
+        <div class="benefit-one__bg"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="benefit-one__content">
+                        <div class="sec-title text-left">
 
+                            <p class="sec-title__tagline">Viaja con los EXPERTOS </p>
+
+                            <h2 class="sec-title__title">Atención personalizada 24/7 por agentes calificados </h2>
+                        </div>
+                        {{-- <h5 class="benefit-one__content__heading">Best ways to enjoy adventures</h5>
+                        <p class="benefit-one__content__text">
+                            There are many variations of passages of Lorem Ipsum simply free text available, but the
+                            majority.
+                        </p> --}}
+                        <div class="benefit-one__box-wrapper">
+                            <div class="benefit-one__box">
+                                <div class="benefit-one__box__icon"><span class="icon-airplane-1"></span></div>
+                                <h3 class="benefit-one__box__title">Reserva ahora y paga después </h3>
+                            </div>
+                            <div class="benefit-one__box">
+                                <div class="benefit-one__box__icon"><span class="icon-ticket-1"></span></div>
+                                <h3 class="benefit-one__box__title">Mejor precio garantizado </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="benefit-one__image"><img src="{{ asset('assets/images/benefit-1-1.webp') }}"
+                            alt="trevlo">
+                    </div>
+                    <div class="benefit-one__counter">
+                        <div class="benefit-one__counter__icon"><span class="icon-satisfied"></span></div>
+                        <!-- /.counter__icon -->
+                        <div class="benefit-one__counter__number count-box"><span class="count-text" data-stop="3800"
+                                data-speed="1500"></span> </div><!-- /.counter__number -->
+                        <p class="benefit-one__counter__title">Clientes satisfechos</p><!-- /.counter__title -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     {{-- HOME HOTEL --}}
     @if ($hotelesHomeData != null)
         <section class="bg_cuadros_verdes2">
@@ -553,6 +603,108 @@
         @endif
     @endif
 
+    <section>
+        <section class="faq-section py-5" style="background: linear-gradient(#00000042, #00000057), url({{ asset('angie/img/faq.webp') }}) center center; background-attachment: fixed;">
+            <div class="container">
+        
+              <div class="w-lg-50 mx-auto">
+                <h6 class="mb-2">FAQ | Preguntas frecuentes</h6>
+                <h2 class="mb-5">¿Tiene alguna pregunta?</h2>
+                <div class="accordion accordion-flush" id="accordionExample">
+        
+                  <!-- 1: coll1 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <!--   data-bs-target="#coll1",  controls="coll1", id="coll1", aria-expanded="true"      -->
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#coll1" aria-expanded="true" aria-controls="coll1">
+                        <h5> Lorem ipsum dolor sit amet consectetur adipisicing.?</h5>
+                      </button>
+                    </h2>
+                    <!-- show : by default Always open -->
+                    <div id="coll1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis vitae asperiores itaque dolor consequatur nam fuga, nihil blanditiis saepe!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <!-- 2: coll2 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <!--       collapsed,   aria-expanded="false"   -->
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#coll2" aria-expanded="false" aria-controls="coll2">
+                        <h5> Lorem ipsum dolor sit.?</h5>
+                      </button>
+                    </h2>
+                    <div id="coll2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est in voluptatum dignissimos. Deserunt blanditiis eaque aut temporibus nemo ratione tenetur sunt dicta at quidem.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <!-- 3: coll3 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#coll3" aria-expanded="false" aria-controls="coll3">
+                        <h5> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, debitis?</h5>
+                      </button>
+                    </h2>
+                    <div id="coll3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dolor recusandae, earum accusamus voluptatibus, suscipit mollitia officiis veritatis numquam enim totam, iure soluta!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <!-- 4: coll4 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <!--   target="#coll4",  id="coll4"  -->
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#coll4" aria-expanded="false" aria-controls="coll4">
+                        <h5> Lorem ipsum dolor sit amet consectetur adipisicing?</h5>
+                      </button>
+                    </h2>
+                    <div id="coll4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptates architecto provident placeat laborum, sequi culpa voluptatibus, dolore maxime porro fuga enim. Laudantium dolore commodi amet quis non!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <!-- 5: coll5 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <!--   target="#coll5",  id="coll5"  -->
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#coll5" aria-expanded="false" aria-controls="coll5">
+                        <h5> Lorem ipsum dolor sit?</h5>
+                      </button>
+                    </h2>
+                    <div id="coll5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, reiciendis unde! Eveniet exercitationem laboriosam nostrum dolores libero vitae voluptates magnam earum saepe quos ab modi nemo iste, cum assumenda.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+        
+                </div>
+              </div>
+        
+            </div>
+          </section>
+    </section>
+
+
     {{-- BLOG --}}
     @if ($articulosRecientes != null)
         <div class="blog-two">
@@ -595,8 +747,8 @@
                                             </p>
                                             <div class="blog-card-two__meta">
                                                 <div class="blog-card-two__author">
-                                                    <img src="{{ asset('cucapah/img/logo-cucapah.png') }}"
-                                                        alt="User blog Cucapah">
+                                                    <img src="{{ asset('angie/img/logo.png') }}"
+                                                        alt="User blog {{ $nameEnterprise }}">
                                                     <h5 class="blog-card-two__author__name">
                                                         <a aria-label="Leer más de {{ $blog['titulo'] }}"
                                                             href="/blog/articulo/{{ $fn->stringToUrl($blog['titulo']) }}/{{ $blog['id'] }}">
@@ -710,7 +862,39 @@
         }
 
         .trevlo-btn::after {
-            background-color: var(--colorSecundario);
+            background-color: var(--colorTerceroPalete);
+            color: #fff !important;
+        }
+
+        .ide {
+            position: relative;
+        }
+
+        .ide::before {
+            content: url({{ asset('angie/img/triangle.svg') }});
+            left: -3%;
+            position: absolute;
+            top: -1%;
+            width: 119px;
+            z-index: 0;
+        }
+
+        .ide::after {
+            content: url({{ asset('angie/img/triangle-circle2.svg') }});
+            right: -6%;
+            position: absolute;
+            top: 48%;
+            width: 155px;
+            z-index: 0;
+        }
+
+        .contenedorInformativo::before {
+            content: url({{ asset('angie/img/triangle-circle.svg') }});
+            right: 93%;
+            position: absolute;
+            top: 88%;
+            width: 147px;
+            z-index: -1;
         }
     </style>
 @endsection
