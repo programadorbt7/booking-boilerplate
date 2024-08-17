@@ -15,7 +15,7 @@ Auth::routes();
 Route::get('/',                                     [SitioWebController::class, 'index'] )                   ->name('index');
 
 Route::get('/test',                                 [SitioWebController::class, 'tester'] )                   ->name('tester');
-Route::get('/preguntas-frecuentes', fn() => view('web.preguntasFrecuentes'))->name('preguntas');
+// Route::get('/preguntas-frecuentes', fn() => view('web.preguntasFrecuentes'))->name('preguntas');
 
 //Paginas generales
 Route::get('/nosotros',                             function(){ return view("web.nosotros"); });

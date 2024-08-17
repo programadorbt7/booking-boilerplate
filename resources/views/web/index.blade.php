@@ -604,7 +604,7 @@
     @endif
 
     <section>
-        <section class="faq-section py-5" style="background: linear-gradient(#00000042, #00000057), url({{ asset('angie/img/faq.webp') }}) center center; background-attachment: fixed;">
+        <section class="faq-section py-5" style="background: linear-gradient(#00000042, #00000057), url({{ asset('angie/img/faq.webp') }}) center center; background-attachment: fixed; background-repeat: no-repeat;">
             <div class="container">
         
               <div class="w-lg-50 mx-auto">
@@ -720,7 +720,7 @@
             <div class="container">
                 {{-- TITULO --}}
                 <div class="sec-title text-center">
-                    <p class="sec-title__tagline">Artículos</p>
+                    <p class="sec-title__tagline txtTituloColor">Artículos</p>
                     <h2 class="sec-title__title">Las últimas noticias & artículos<br> en nuestro blog</h2>
                 </div>
                 {{-- CARD --}}

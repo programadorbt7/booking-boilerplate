@@ -674,3 +674,7 @@
 .social-icons-2 > li > a {
     color: var(--colorQuintoPalete);
 }
+
+.txtTituloColor {
+    color: #000;
+}
