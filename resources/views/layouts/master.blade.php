@@ -215,7 +215,9 @@
                 <div class="container">
                     <div class="d-flex">
                         <div class="col-sm-6">
-                            <img class="imgLogoMenu" src="{{ asset('angie/img/logo.png') }}" alt="{{ $nameEnterprise }}">
+                            <a href="/">
+                                <img class="imgLogoMenu" src="{{ asset('angie/img/logo.png') }}" alt="{{ $nameEnterprise }}">
+                            </a>
                         </div>
                         <div class="col-sm-6 contentInfoData">
                             <div style="display: grid; grid-template-columns: repeat(1, 1fr);">
