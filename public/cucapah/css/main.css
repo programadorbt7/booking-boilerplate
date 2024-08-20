@@ -6,6 +6,10 @@
     --colorBackground: #081a36;
 }
 
+*:not(i):not(.far):not(.fa-regular):not(.fa-solid):not(.fab):not(.fa-brands):not(.fa):not([class*=" icon-"]):not([class^="icon-"]):not(.fas){
+    font-family: "Exo", sans-serif !important;
+}
+
 .nav-tabs .nav-link {
     background-color: #344fc89b;
 }

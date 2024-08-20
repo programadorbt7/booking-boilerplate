@@ -29,7 +29,7 @@
     <meta name="msapplication-TileImage" content="{{ asset('assets/images/favicons/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
     {{-- FONT Cucapah --}}
-    <link href="https://fonts.cdnfonts.com/css/metropolis-2" rel="stylesheet">
+    {{-- <link href="https://fonts.cdnfonts.com/css/metropolis-2" rel="stylesheet"> --}}
     {{-- FONT AWESOME --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
