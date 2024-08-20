@@ -333,7 +333,7 @@
                         <div class="main-header__logo">
                             <a href="/">
                                 <img src="{{ asset('angie/img/logo.png') }}"
-                                    alt="Logo Cucapah" width="146" class="imgHeaderHome">
+                                    alt="Logo {{ $nameEnterprise }}" width="146" class="imgHeaderHome">
                             </a>
                         </div>
                         {{-- NAV MENU --}}
@@ -474,7 +474,7 @@
                         <div class="main-footer__logo-box d-flex justify-content-center">
                             <a href="/" aria-label="Inicio" class="hrefImgLogoFooter">
                                 <img src="{{ asset('angie/img/logo.png') }}"
-                                    alt="logo Cucapah" class="main-footer__logo">
+                                    alt="logo {{ $nameEnterprise }}" class="main-footer__logo">
                             </a>
                         </div>
                     </div>

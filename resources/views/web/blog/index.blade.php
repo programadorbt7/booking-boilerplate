@@ -77,7 +77,7 @@
                                                 <div class="blog-card-two__meta">
                                                     <div class="blog-card-two__author">
                                                         <img src="{{ asset('angie/img/logo.png') }}"
-                                                            alt="User blog Cucapah">
+                                                            alt="User blog {{$nameEnterprise}}">
                                                         <h5 class="blog-card-two__author__name">
                                                             <a aria-label="Leer más de {{ $blog['titulo'] }}"
                                                                 href="/blog/articulo/{{ $fn->stringToUrl($blog['titulo']) }}/{{ $blog['id'] }}">

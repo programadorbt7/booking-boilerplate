@@ -3,8 +3,8 @@
 @section('metaSEO')
     <title>Nosotros - {{ $nameEnterprise }}</title>
     <meta name="description"
-        content="¿Quienes somos? aqui te cuento todo acerca de nosotros Cucapah tu agencia de viajes para conocer diversos lugares del mundo.">
-    <meta name="keywords" content="Nosotros, Agencia de Viajes, A Cerca De, Cucapah, Somos, Desde, Experiencias, Tours">
+        content="¿Quienes somos? aqui te cuento todo acerca de nosotros {{$nameEnterprise}} tu agencia de viajes para conocer diversos lugares del mundo.">
+    <meta name="keywords" content="Nosotros, Agencia de Viajes, A Cerca De, {{$nameEnterprise}}, Somos, Desde, Experiencias, Tours">
 @endsection
 
 @section('contenido-principal')

@@ -6,9 +6,9 @@
 
 @section('metaSEO')
     <title>Blog en {{ ucfirst(str_replace(['-'], ' ', $nombreCategoria)) }} - {{ $nameEnterprise }}</title>
-    <meta name="description" content="Blog oficial de Cucapah">
+    <meta name="description" content="Blog oficial de {{$nameEnterprise}}">
     <meta name="keywords"
-        content="blog de Cucapah, blog de viajes, viajar, blog, blogs, blog de Cucapah, noticias de Cucapah, viajes, aventuras, tours, lugares, ciudades, ciudad">
+        content="blog de {{$nameEnterprise}}, blog de viajes, viajar, blog, blogs, blog de {{$nameEnterprise}}, noticias de {{$nameEnterprise}}, viajes, aventuras, tours, lugares, ciudades, ciudad">
 @endsection
 
 @section('contenido-principal')
@@ -84,7 +84,7 @@
                                                     <div class="blog-card-two__meta">
                                                         <div class="blog-card-two__author">
                                                             <img src="{{ asset('angie/img/logo.png') }}"
-                                                                alt="User blog Cucapah">
+                                                                alt="User blog {{$nameEnterprise}}">
                                                             <h5 class="blog-card-two__author__name">
                                                                 <a aria-label="Leer más de {{ $articulo['titulo'] }}"
                                                                     href="/blog/articulo/{{ $fn->stringToUrl($articulo['titulo']) }}/{{ $articulo['id'] }}">

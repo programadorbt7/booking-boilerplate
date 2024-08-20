@@ -5,7 +5,7 @@
     <meta name="description"
         content="Tu privacidad es fundamental para nosotros. por ello, te invitamos a leer nuestra política de privacidad para conocer cómo protegemos tus datos mientras conoces cada uno de nuestros tours.">
     <meta name="keywords"
-        content="Privacidad, Tours, Cucapah, Política, Viajes, Vuelos, Lugares, Avisos del Viaje, Condiciones del Viaje, Responsabilidad, Acuerdo legal, Información Importante, Reglas de Viaje">
+        content="Privacidad, Tours, {{ $nameEnterprise }}, Política, Viajes, Vuelos, Lugares, Avisos del Viaje, Condiciones del Viaje, Responsabilidad, Acuerdo legal, Información Importante, Reglas de Viaje">
 @endsection
 
 @section('contenido-principal')

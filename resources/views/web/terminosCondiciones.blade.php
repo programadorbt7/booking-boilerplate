@@ -4,7 +4,7 @@
     <title>Terminos Y Condiciones - {{ $nameEnterprise }}</title>
     <meta name="description"
         content="Lee nuestros términos y condiciones antes de tomar uno de nuestros tours con nosotros. Aquí encontrarás toda la información importante que necesitas conocer.">
-    <meta name="keywords" content="Terminos, Condiciones, Angencia de Viajes, Tours, Experiencias, Conoce, Cucapah">
+    <meta name="keywords" content="Terminos, Condiciones, Angencia de Viajes, Tours, Experiencias, Conoce, {{$nameEnterprise}}">
 @endsection
 
 @section('contenido-principal')

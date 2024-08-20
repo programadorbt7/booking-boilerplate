@@ -7,9 +7,9 @@
 @section('metaSEO')
     <title>Inicio - {{ $nameEnterprise }}</title>
     <meta name="description"
-        content="Cucapah es una agencia de viajes caracterizada por el buen servicio y oferta de productos turisticos de calidad en diversos destinos, estamos comprometidos con cumplir los sueños de viaje de nuestros clientes.">
+        content="{{$nameEnterprise}} es una agencia de viajes caracterizada por el buen servicio y oferta de productos turisticos de calidad en diversos destinos, estamos comprometidos con cumplir los sueños de viaje de nuestros clientes.">
     <meta name="keywords"
-        content="Agencias, Agencias viajes, Viajes, Tours, Niños, Adultos, Experiencias, Visitas, Paquetes Turisticos, Turismo, Vuelos, Ciudades, Lugares, Residencias, Hoteles, Playas, Cucapah">
+        content="Agencias, Agencias viajes, Viajes, Tours, Niños, Adultos, Experiencias, Visitas, Paquetes Turisticos, Turismo, Vuelos, Ciudades, Lugares, Residencias, Hoteles, Playas, {{$nameEnterprise}}">
 @endsection
 
 @section('contenido-principal')
