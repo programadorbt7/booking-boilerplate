@@ -35,7 +35,7 @@
             @else 
                 <div class="item">
                     <div class="main-slider-one__image"
-                        style="background-image: url({{ asset('cucapah/img/experiencias1.webp') }});">
+                        style="background-image: url({{ asset('angie/img/banners/banner1.webp') }});">
                     </div>
                     <div class="container">
                         <div class="main-slider-one__content">
