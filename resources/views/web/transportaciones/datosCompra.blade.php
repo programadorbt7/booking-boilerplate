@@ -80,7 +80,7 @@
                             <h3><strong>1 - </strong>¿Quieres agregar algún producto a tu reservación?</h3>
                         </div>
 
-                        <div class="row">
+                        <div class="row my-4">
                             @if ($countProductos > 0)
                                 @foreach ($productosTiendita as $producto)
                                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-2" style="margin-bottom: 15px;">
@@ -94,7 +94,6 @@
                                                 <div id="totalProducto_{{ $producto['id'] }}" class="totalProducto"
                                                     style="display: none;">
                                                     $ <span class="total"></span>
-                                                    <br>
                                                     <small>{{ $monedaSeleccionada }}</small>
                                                 </div>
                                                 <div
@@ -162,13 +161,13 @@
                             @endif
                         </div>
 
-                        <div class="form_title my-4">
+                        <div class="form_title mt-5">
                             <h3><strong>2 - </strong>Resumen de la cuenta</h3>
                         </div>
 
-                        <div class="steps">
+                        <div class="steps my-5">
                             <div class="row" style="padding: 5px;">
-                                <table class="table table-hover table__Container__Ticket"
+                                <table class="table table-hover col-lg-12"
                                     style="background-color: #f6f6f6;">
                                     <thead>
                                         <tr class="table-primary fw-bold" style="background-color: #cfe2ff;">
@@ -218,9 +217,6 @@
                                     </tfoot>
                                 </table>
                             </div>
-                        </div>
-                        <div class="row">
-
                         </div>
 
                         <div class="form_title my-4">
@@ -707,6 +703,14 @@
 
         .titulo_terms {
             padding: 15px;
+        }
+
+        .card-footer span{
+            font-size: 15px;
+        }
+
+        .card-footer .trevlo-btn--base::before{
+            background-color: #3c6ec4;
         }
     </style>
 @endsection

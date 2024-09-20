@@ -28,6 +28,9 @@ Route::get('/galeria',                              [SitioWebController::class, 
 Route::get('/circuitos/{entidad}/{entidad2}/{id}',  [SitioWebController::class, 'circuitosTuristicos'])      ->name('circuitosTuristicos.entidad.entidad2.id');
 Route::post('/paypalEstatus',                       [SitioWebController::class, 'getEstatusPaypal'])         ->name('getEstatusPaypal');
 
+Route::get('/eventos',                             function(){ return view("web.eventos"); });
+Route::get('/grupos',                             function(){ return view("web.grupos"); });
+
 //Exclusivo para envio y recepcion de email Personalizados de una Agencia
 Route::get('/formularioAgencia',                    function(){ return view("web.formularioAgencia"); });
 Route::post('/graciasAgencia',                      [FormularioController::class, 'formularioAgencia'])      ->name('graciasAgencia');

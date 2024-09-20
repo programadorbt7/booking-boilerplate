@@ -17809,3 +17809,37 @@ body.boxed-wrapper .main-header__booking-btn {
     margin-top: 55px;
   }
 }
+
+#formbuscadorTransporte input{
+  background-color: white;
+}
+
+#formbuscadorTransporte input{
+  padding: 0 0 0 10px;
+}
+
+.cards-transporte {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.cards-transporte .row{
+  margin: 0;
+}
+
+@media(max-width:991px){
+  .card-tarifas{
+  margin: 15px 0;
+}
+}
+
+.cards-transporte .trevlo-btn{
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.cards-transporte img{
+  object-fit: contain;
+}

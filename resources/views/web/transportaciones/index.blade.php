@@ -32,107 +32,182 @@
     @include('web.partials.motorTransportacionMV1')
 
     {{-- LIST --}}
-    <section>
-        <div style="margin: 5rem auto;">
-            @if ($transportacionLista != null)
-                @foreach ($transportacionLista as $transporte)
-                    <div class="strip_all_tour_list wow fadeIn" data-wow-delay="0.1s" style="width: 100%;">
-                        <div class="row row__Container__Unidad">
-                            <div class="col-lg-4 col-md-4 position-relative" style="padding: 0;">
-                                <div class="img_list imgHeight ">
-                                    <a class="a__Img__Container"
-                                        href="datos-compra-trans?tra={{ $fn->codificaUrl($transporte['linkSencillo']) }}">
-                                        <img src="{{ $transporte['linkImg'] }}" alt="{{ $transporte['modelo'] }}"
-                                            style="object-fit: cover; width: 100%;">
-                                        {{-- <div class="short_info"></div> --}}
-                                    </a>
+    <section class="mt-80">
+        <div class="container">
+            <div class="row" style="grid-row-gap: 50px; margin:0;">
+                <div class="col-lg-12">
+                    @if ($transportacionLista != null)
+                        <h6>Se encontraron {{ count($transportacionLista) }} transportes
+                            disponibles</h6>
+                    @else
+                        <h6>Por el momento no hay transportes disponibles</h6>
+                    @endif
+                </div>
+                @if ($transportacionLista != null)
+                    @foreach ($transportacionLista as $transporte)
+                        <div class="col-12 row cards-transporte">
+                            <!-- Muestra imagen -->
+                            <div class="col-lg-4 col-md-6">
+                                <a href="{{ $tipoServicio == 1 ? route('datos-compra-transportacion-m1', ['datosCompraTransporte' => $fn->codificaUrl($transporte['linkSencillo'])]) : route('datos-compra-transportacion-m1', ['datosCompraTransporte' => $fn->codificaUrl($transporte['linkRedondo'])]) }}"
+                                    class="tour-listing-three__card-image-box tour-listing__card-image-box">
+                                    <img src="{{ $transporte['linkImg'] }}" alt="{{ $transporte['modelo'] }}"
+                                        class="tour-listing-three__card-image tour-listing__card-image">
+                                </a>
+                            </div>
 
-                                    <div class="capacidad container__Information__paxs">
-                                        <div class="container__icons__Transportation">
-                                            <i aria-hidden="true" class="fas fa-users"></i>
-                                            <span class="text-center">Pax máx: {{ $transporte['pasaje_max'] }}</span>
+                            <!-- Nombre y servicios -->
+                            <div class="col-lg-4 col-md-6">
+                                <h5 class="tour-listing-three__card-title tour-listing__card-title">
+                                    <a
+                                        href="{{ $tipoServicio == 1 ? route('datos-compra-transportacion-m1', ['datosCompraTransporte' => $fn->codificaUrl($transporte['linkSencillo'])]) : route('datos-compra-transportacion-m1', ['datosCompraTransporte' => $fn->codificaUrl($transporte['linkRedondo'])]) }}">
+                                        Servicio {{ $transporte['nombreServicio'] }}
+                                        {{ $tipoServicio == 1 ? 'Sencillo' : 'Redondo' }}
+                                    </a>
+                                </h5>
+
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="margin-top:0">
+                                        <div class="tour-one__stars">
+                                            <i class="fas fa-car"></i>
+                                            {{ $transporte['marca'] }}
                                         </div>
-                                        <div class="container__icons__Transportation">
-                                            <i aria-hidden="true" class="fas fa-suitcase"></i>
-                                            <span class="text-center">Maletas máx: {{ $transporte['maletas'] }}</span>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="margin-top:0">
+                                        <div class="tour-one__stars">
+                                            <i class="fas fa-car"></i>
+                                            {{ $transporte['modelo'] }}
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="margin-top:0">
+                                        <div class="tour-one__stars">
+                                            <i class="fas fa-stream"></i>
+                                            {{ $transporte['tiposervicio'] }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="tour-one__stars">
+                                            <i class="fas fa-user-plus"></i> Pax máx:
+                                            {{ $transporte['pasaje_max'] }}
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="tour-one__stars">
+                                            <i class="fas fa-luggage-cart"></i> Maletas máx:
+                                            {{ $transporte['maletas'] }}
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-8 col-md-8 pt-3 pt-xl-0 pt-lg-0 pt-md-0 px-0 px-lg-4 px-xl-4 px-md-4">
-                                <div class="tour_list_desc container__table__info">
-                                    <ul class="list_ok listServicesCont d-flex justify-content-around m-0 check__models"
-                                        style="flex-wrap: wrap">
-                                        <li><b>Servicio {{ $transporte['nombreServicio'] }}</b></li>
-                                        <li><i aria-hidden="true" class="fas fa-check"></i> {{ $transporte['marca'] }} </li>
-                                        <li><i aria-hidden="true" class="fas fa-check"></i> {{ $transporte['modelo'] }}
-                                        </li>
-                                        <li><i aria-hidden="true" class="fas fa-check"></i>
-                                            {{ $transporte['tiposervicio'] }}
-                                        </li>
-                                    </ul>
-                                    <div class="container__Table__Main">
-                                        <table class="table m-0">
-                                            <tbody>
+
+                            <!-- Tarifas -->
+                            <div class="col-lg-4 col-md-12 card-tarifas">
+                                <ul class="tour-one__meta list-unstyled">
+                                    <table class="table m-0">
+                                        <tbody>
+                                            @if ($transporte['tipo_pago'] == 1)
                                                 <tr style="border-bottom: 1px solid black;">
-                                                    <th>Servicio</th>
-                                                    <td>Sencillo</td>
-                                                    <td>Redondo</td>
+                                                    <th>Adulto
+                                                        <small>
+                                                            <i data-toggle="tooltip" data-placement="top"
+                                                                title="El precio es por Pasajero"
+                                                                class="fa-solid fa-circle-info"></i>
+                                                        </small>
+                                                    </th>
+
+                                                    @if ($transporte['menorSencillo'] != 0 || $transporte['menorRedondo'] != 0)
+                                                        <td>
+                                                            Menor
+                                                            <small><i data-toggle="tooltip" data-placement="top"
+                                                                    title="{{ $transporte['edadMenorMin'] }} años a {{ $transporte['edadMenorMax'] }} años"
+                                                                    class="fa-solid fa-circle-info"></i></small>
+                                                        </td>
+                                                    @endif
+
+                                                    @if ($transporte['infanteSencillo'] != 0 || $transporte['infanteRedondo'] != 0)
+                                                        <td>
+                                                            Infante
+                                                            <small><i data-toggle="tooltip" data-placement="top"
+                                                                    title="{{ $transporte['edadInfanteMin'] }} años - {{ $transporte['edadInfanteMax'] }} años"
+                                                                    class="fa-solid fa-circle-info"></i></small>
+                                                        </td>
+                                                    @endif
                                                 </tr>
-                                                @if ($transporte['tipo_pago'] == 1)
-                                                    <tr>
-                                                        <th>Adulto</th>
-                                                        <td>$ {{ $transporte['adultoSencillo'] }} </td>
-                                                        <td>$ {{ $transporte['adultoRedondo'] }} </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Menor</th>
-                                                        <td>$ {{ $transporte['menorSencillo'] }}</td>
-                                                        <td>$ {{ $transporte['menorRedondo'] }} </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Infante</th>
-                                                        <td>$ {{ $transporte['infanteSencillo'] }}</td>
-                                                        <td>$ {{ $transporte['infanteRedondo'] }}</td>
+                                            @else
+                                                @if ($transporte['id_rango'] != null)
+                                                    <tr style="border-bottom: 1px solid black;">
+                                                        <th>Por Pasajero
+                                                            <small><i data-toggle="tooltip" data-placement="top"
+                                                                    title="El precio es por Pasajero"
+                                                                    class="fa-solid fa-circle-info"></i></small>
+                                                        </th>
                                                     </tr>
                                                 @else
-                                                    <tr>
-                                                        <th>Traslado</th>
-                                                        <td>$ {{ $transporte['adultoSencillo'] }}</td>
-                                                        <td>$ {{ $transporte['adultoRedondo'] }}</td>
+                                                    <tr style="border-bottom: 1px solid black;">
+                                                        <th>Por Unidad <small><i data-toggle="tooltip" data-placement="top"
+                                                                    title="El precio es por Unidad"
+                                                                    class="fa-solid fa-circle-info"></i></small>
+                                                        </th>
                                                     </tr>
                                                 @endif
+                                            @endif
 
-                                                <tr style="border-bottom: 0;">
-                                                    <th></th>
-                                                    <td>
-                                                        <span class="hot-list-p3-4">
-                                                            @if ($tipoServicio == 1)
-                                                                <a href="{{ route('datos-compra-transportacion-m1', ['datosCompraTransporte' => $fn->codificaUrl($transporte['linkSencillo'])]) }}"
-                                                                    class="trevlo-btn trevlo-btn--base"><span>Reservar</span></a>
-                                                            @endif
-                                                        </span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="hot-list-p3-4">
-                                                            @if ($tipoServicio == 2)
-                                                                <a href="{{ route('datos-compra-transportacion-m1', ['datosCompraTransporte' => $fn->codificaUrl($transporte['linkRedondo'])]) }}"
-                                                                    class="trevlo-btn trevlo-btn--base"><span>Reservar</span></a>
-                                                            @endif
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                            @if ($transporte['tipo_pago'] == 1)
+                                                <th>$
+                                                    {{ $tipoServicio == 1 ? $transporte['adultoSencillo'] : $transporte['adultoRedondo'] }}
+                                                </th>
+
+
+                                                @if ($transporte['menorSencillo'] != 0 || $transporte['menorRedondo'] != 0)
+                                                    <th>$
+                                                        {{ $tipoServicio == 1 ? $transporte['menorSencillo'] : $transporte['menorRedondo'] }}
+                                                    </th>
+                                                @endif
+
+                                                @if ($transporte['infanteSencillo'] != 0 || $transporte['infanteRedondo'] != 0)
+                                                    <th>$
+                                                        {{ $tipoServicio == 1 ? $transporte['infanteSencillo'] : $transporte['infanteRedondo'] }}
+                                                    </th>
+                                                @endif
+                                            @else
+                                                <th>$
+                                                    {{ $tipoServicio == 1 ? $transporte['adultoSencillo'] : $transporte['adultoRedondo'] }}
+                                                </th>
+                                            @endif
+                                        </tbody>
+                                    </table>
+                                </ul>
+
+                                @if ($tipoServicio == 1)
+                                    <div style="display: flex; justify-content: center;" class="mt-2 mb-2">
+                                        <a class="trevlo-btn trevlo-btn--base"
+                                            href="{{ route('datos-compra-transportacion-m1', ['datosCompraTransporte' => $fn->codificaUrl($transporte['linkSencillo'])]) }}">
+                                            <span>
+                                                Seleccionar
+                                            </span>
+                                        </a>
                                     </div>
-                                </div>
+                                @else
+                                    <div style="display: flex; justify-content: center;" class="mt-2 mb-2">
+                                        <a class="trevlo-btn trevlo-btn--base"
+                                            href="{{ route('datos-compra-transportacion-m1', ['datosCompraTransporte' => $fn->codificaUrl($transporte['linkRedondo'])]) }}">
+                                            <span>
+                                                Seleccionar
+                                            </span>
+                                        </a>
+                                    </div>
+                                @endif
+
+
                             </div>
                         </div>
-                    </div>
-                @endforeach
-            @else
-                <h1 style="text-align: center">Sin disponibilidad</h1>
-            @endif
+                    @endforeach
+                @else
+                    <h1 style="text-align: center">Sin disponibilidad</h1>
+                @endif
+            </div>
         </div>
     </section>
 @endsection

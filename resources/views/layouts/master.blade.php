@@ -364,6 +364,19 @@
                                         @endforeach
                                     </ul>
                                 </li>
+                                <li>
+                                    <a class="flexIconsMenu" aria-label="Eventos" href="/eventos">
+                                        <span><i class="fa-solid fa-champagne-glasses"></i></span>
+                                        Eventos
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="flexIconsMenu" aria-label="Grupos" href="/grupos">
+                                        <span><i class="fa-solid fa-people-group"></i></span>
+                                        Grupos
+                                    </a>
+                                </li>
                                 @if ($megaTravel != null)
                                     <li class="dropdown">
                                         <a class="flexIconsMenu">

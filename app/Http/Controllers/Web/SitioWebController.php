@@ -3055,6 +3055,7 @@ class SitioWebController extends Controller
             $linkSencillo .= "&fechaLlegada=" . $fechaLlegada . "&fechaSalida=" . $fechaSalida;
             $linkSencillo .= "&unidad=" . $lista["idunidad"] . "&tipoUnidad=" . $lista["id_unidad"];
             $linkSencillo .= "&nombreOrigenTransporte=" . $nombreOrigenTransporte . "&nombreDestinoTransporte=" . $nombreDestinoTransporte;
+            $linkSencillo .= "&id_rango=" . $lista["id_rango"];
 
             $linkRedondo =  $edades . "&tipo=2&reg=" . $lista["id"] . "&za=" . $lista["id_zona_checkin"] . "&zb=";
             $linkRedondo .= $lista["id_zona_checkout"] . "&ad=" . $adultoRedondo["preciosimple"];
@@ -3065,6 +3066,7 @@ class SitioWebController extends Controller
             $linkRedondo .= "&fechaLlegada=" . $fechaLlegada . "&fechaSalida=" . $fechaSalida;
             $linkRedondo .= "&unidad=" . $lista["idunidad"] . "&tipoUnidad=" . $lista["id_unidad"];
             $linkRedondo .= "&nombreOrigenTransporte=" . $nombreOrigenTransporte . "&nombreDestinoTransporte=" . $nombreDestinoTransporte;
+            $linkRedondo .= "&id_rango=" . $lista["id_rango"];
 
             $transportacionLista[$i]['pasaje_max']      = $lista["pasaje_max"];
             $transportacionLista[$i]['maletas']         = $lista["maletas"];
@@ -3083,9 +3085,18 @@ class SitioWebController extends Controller
             $transportacionLista[$i]['infanteSencillo'] = $infanteSencillo["precioformato"];
             $transportacionLista[$i]['infanteRedondo']  = $infanteRedondo["precioformato"];
             $transportacionLista[$i]['nombreServicio']  = $nombreServicio;
+            $transportacionLista[$i]['id_rango']        = $lista["id_rango"];
+            $transportacionLista[$i]['rango_min']       = $lista["rango_min"];
+            $transportacionLista[$i]['rango_max']       = $lista["rango_max"];
+            $transportacionLista[$i]['edadMenorMin']    = $lista["edad_menor_min"];
+            $transportacionLista[$i]['edadMenorMax']    = $lista["edad_menor_max"];
+            $transportacionLista[$i]['edadInfanteMin']    = $lista["edad_infante_min"];
+            $transportacionLista[$i]['edadInfanteMax']    = $lista["edad_infante_max"];
         }
+        // dd($origenTransporte, $nombreOrigenTransporte, $idOrigenTransporte, $idZonaOrigen);
+        // dd($transportacionLista);
 
-        return view('web.transportaciones.index', compact(
+        return view('web.transportaciones.index', data: compact(
             'transportacionLista',
             'tipoServicio',
             'fechaLlegada',

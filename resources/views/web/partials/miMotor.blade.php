@@ -14,6 +14,13 @@
                     <i aria-hidden="true" class="fa-solid fa-person-walking-luggage"></i>
                     Tours</button>
             </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="transportation-tab" data-bs-toggle="tab"
+                    data-bs-target="#transportation-tab-pane" type="button" role="tab"
+                    aria-controls="transportation-tab-pane" aria-selected="false">
+                    <i aria-hidden="true" class="fa-solid fa-bus"></i>
+                    Transportación</button>
+            </li>
         </ul>
         {{-- TABS --}}
         <div class="tab-content" id="myTabContent">
@@ -115,8 +122,7 @@
                     <div class="row mt-2">
                         <div class="text-center">
                             <div class="col-lg-4 col-md-6 col-sm-12 mx-auto">
-                                <button type="submit" aria-label="search submit"
-                                    class="trevlo-btn">
+                                <button type="submit" aria-label="search submit" class="trevlo-btn">
                                     <span><i aria-hidden="true" class="icon-search"></i> Buscar</span>
                                 </button>
                             </div>
@@ -144,8 +150,7 @@
                     <div class="row mt-2">
                         <div class="text-center">
                             <div class="col-lg-4 col-md-6 col-sm-12 mx-auto">
-                                <button type="submit" aria-label="search submit"
-                                    class="trevlo-btn">
+                                <button type="submit" aria-label="search submit" class="trevlo-btn">
                                     <span><i aria-hidden="true" class="icon-search"></i> Buscar</span>
                                 </button>
                             </div>
@@ -154,6 +159,114 @@
                 </form>
             </div>
             {{-- TRANSPORTE --}}
+            <div class="tab-pane fade" id="transportation-tab-pane" role="tabpanel"
+                aria-labelledby="transportation-tab" tabindex="0">
+                <form id="formbuscadorTransporte" class="banner-form__wrapper" action="{{ route('transportation-list') }}" method="get">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-2">
+                            <div class="banner-form__control">
+                                <label for="Servicios">Servicios</label>
+                                <select name="tipoServicio" id="tipoServicio" class="form-control">
+                                    <option value="1" selected>Sencillo</option>
+                                    <option value="2">Redondo</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="banner-form__control">
+                                <label for="Adultos">Adulto</label>
+                                <select name="adultosTrans" id="adultosTrans" class="form-control">
+                                    <option value="1">1</option>
+                                    @for ($i = 2; $i <= 10; $i++)
+                                        <option value="{{ $i }}">{{ $i }}</option>
+                                    @endfor
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="banner-form__control">
+                                <label for="Menores">Menores</label>
+                                <select name="menoresTrans" id="menoresTrans" class="form-control">
+                                    <option value="0">0</option>
+                                    @for ($i = 1; $i <= 10; $i++)
+                                        <option value="{{ $i }}">{{ $i }}
+                                        </option>
+                                    @endfor
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center" style="margin: 20px 0">
+                        <div class="col-lg-2">
+                            <div class="banner-form__control">
+                                <label for="Origen">Origen</label>
+                                <input type="text" class="form-control" id="origenTransporte"
+                                    name="origenTransporte" required placeholder="Escribe un origen"
+                                    value="{{ $nombreLugar }}" onchange="verificarDestinos()">
+                                <input type="hidden" name="nombreOrigenTransporte" id="nombreOrigenTransporte"
+                                    value="{{ $nombreLugar }}">
+                                <!-- Id del hotel o ubicacion-->
+                                <input type="hidden" name="idOrigenTransporte" id="idOrigenTransporte"
+                                    value="{{ $idLugar }}">
+                                <!-- id de la zona -->
+                                <input type="hidden" name="idZonaOrigen" id="idZonaOrigen"
+                                    value="{{ $id_zona }}">
+                                <div id="loadOrigenNames" class="oculto">
+                                    <div class="lds-facebook">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2">
+                            <div class="banner-form__control">
+                                <label for="destino">Destino</label>
+                                <input type="text" class="form-control" id="destinoTransporte"
+                                    name="destinoTransporte" required placeholder="Escribe un destino"
+                                    onchange="verificarDestinos()">
+                                <input type="hidden" name="nombreDestinoTransporte" id="nombreDestinoTransporte"
+                                    value="">
+                                <input type="hidden" name="idDestinoTransporte" id="idDestinoTransporte">
+                                <input type="hidden" name="idZonaDestino" id="idZonaDestino">
+                                <div id="loadDestinoNames" class="oculto">
+                                    <div class="lds-facebook">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2">
+                            <div class="banner-form__control">
+                                <label for="Llegada">Llegada</label>
+                                <input type="text" class="form-control" name="fechaLlegada" id="fechaLlegada">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 oculto" id="fechaRegreso">
+                            <div class="banner-form__control">
+                                <label for="Regreso">Regreso</label>
+                                <input type="text" class="form-control" name="fechaSalida" id="fechaSalida">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row mt-2">
+                        <div class="text-center">
+                            <div class="col-lg-4 col-md-6 col-sm-12 mx-auto">
+                                <button type="submit" aria-label="search submit" class="trevlo-btn">
+                                    <span>Buscar</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
