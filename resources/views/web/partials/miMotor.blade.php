@@ -1,6 +1,6 @@
 <div class="banner-form">
     <div class="container">
-        {{-- MENU --}}
+
         <ul class="nav nav-tabs justify-content-center border-0" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
@@ -123,7 +123,7 @@
                         <div class="text-center">
                             <div class="col-lg-4 col-md-6 col-sm-12 mx-auto">
                                 <button type="submit" aria-label="search submit" class="trevlo-btn">
-                                    <span><i aria-hidden="true" class="icon-search"></i> Buscar</span>
+                                    <span>Buscar</span>
                                 </button>
                             </div>
                         </div>
@@ -151,7 +151,7 @@
                         <div class="text-center">
                             <div class="col-lg-4 col-md-6 col-sm-12 mx-auto">
                                 <button type="submit" aria-label="search submit" class="trevlo-btn">
-                                    <span><i aria-hidden="true" class="icon-search"></i> Buscar</span>
+                                    <span>Buscar</span>
                                 </button>
                             </div>
                         </div>
@@ -161,7 +161,8 @@
             {{-- TRANSPORTE --}}
             <div class="tab-pane fade" id="transportation-tab-pane" role="tabpanel"
                 aria-labelledby="transportation-tab" tabindex="0">
-                <form id="formbuscadorTransporte" class="banner-form__wrapper" action="{{ route('transportation-list') }}" method="get">
+                <form id="formbuscadorTransporte" class="banner-form__wrapper"
+                    action="{{ route('transportation-list') }}" method="get">
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-2">
                             <div class="banner-form__control">

@@ -19,7 +19,7 @@
     {{-- BANNER --}}
     <section class="page-header">
         <div class="page-header__bg"
-            style="background-image: url({{ asset('angie/img/banners/catexperiencias.webp') }})"></div>
+            style="background-image: url({{ asset('travezo/img/banners/catexperiencias.webp') }})"></div>
         <div class="container">
             <h2 class="page-header__title wow animated fadeInLeft" data-wow-delay="0s" data-wow-duration="1500ms">
                 Experiencias en
@@ -90,8 +90,10 @@
                                         $paisExperiencias = $fn->reemplaza_espacios($experiencia['nombrepais']);
                                         $tipoExperiencias = $fn->reemplaza_espacios($experiencia['tipoexcursion']);
                                     @endphp
+
+                                    
                                     <div class="col-lg-12 col-md-12 wow fadeInUp filaTour geografico_{{ $fn->eliminar_acentos($paisExperiencias) }} geografico_{{ $fn->eliminar_acentos($estadoExperiencias) }} tipo_{{ $fn->eliminar_acentos($tipoExperiencias) }}"
-                                        data-length="{{ $i }}" data-posicion="" data-wow-delay="100ms">
+                                        data-length="{{ $i }}" data-posicion="" data-wow-delay="100ms" style="margin-top: 20px !important">
                                         <div class="tour-type-two__box">
                                             <div class="tour-type-two__box__flipper">
                                                 {{-- FRONT --}}

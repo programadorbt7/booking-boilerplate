@@ -13,8 +13,7 @@
 @section('contenido-principal')
     {{-- BANNER --}}
     <section class="page-header">
-        <div class="page-header__bg"
-            style="background-image: url({{ asset('angie/img/banners/blog.webp') }})"></div>
+        <div class="page-header__bg" style="background-image: url({{ asset('travezo/img/banners/blog.webp') }})"></div>
         <div class="container">
             <h2 class="page-header__title wow animated fadeInLeft" data-wow-delay="0s" data-wow-duration="1500ms">
                 Entérate de lo último</h2>
@@ -57,49 +56,26 @@
                     <div class="blog-list__inner-container">
                         <div class="row gutter-y-50">
                             @foreach ($blogs as $blog)
-                                <div class="blog-card-two">
-                                    <div class="row d-flex align-items-center">
-                                        <div class="col-md-7">
-                                            <div class="blog-card-two__content">
-                                                <h3 class="blog-card-two__title">
-                                                    <a aria-label="Leer más de {{ $blog['titulo'] }}"
-                                                        href="/blog/articulo/{{ $fn->stringToUrl($blog['titulo']) }}/{{ $blog['id'] }}">
-                                                        {{ $fn->recortar_cadena($blog['titulo'], 30) }}
-                                                    </a>
-                                                </h3>
-                                                <p class="blog-cat">
-                                                    <i aria-hidden="true" class="fa-regular fa-bookmark"></i>
-                                                    {{ $blog['categoria'] }}
-                                                </p>
-                                                <p class="blog-card-two__text">
-                                                    {{ $blog['descripcion'] }}
-                                                </p>
-                                                <div class="blog-card-two__meta">
-                                                    <div class="blog-card-two__author">
-                                                        <img src="{{ asset('angie/img/logo.png') }}"
-                                                            alt="User blog {{$nameEnterprise}}">
-                                                        <h5 class="blog-card-two__author__name">
-                                                            <a aria-label="Leer más de {{ $blog['titulo'] }}"
-                                                                href="/blog/articulo/{{ $fn->stringToUrl($blog['titulo']) }}/{{ $blog['id'] }}">
-                                                                Por: {{ $blog['usuario'] }}
-                                                            </a>
-                                                        </h5>
+                                <div class="row mt-7">
+                                    <div class="preview-card">
+                                        <div class="preview-card__wrp">
+                                            <div class="preview-card__item">
+                                                <a
+                                                    href="/blog/articulo/{{ $fn->stringToUrl($blog['titulo']) }}/{{ $blog['id'] }}">
+                                                    <div class="preview-card__img">
+                                                        <img src="{{ $blog['carrousel'] }}" alt="{{ $blog['titulo'] }}">
                                                     </div>
-                                                    <a aria-label="Leer más de {{ $blog['titulo'] }}"
-                                                        href="/blog/articulo/{{ $fn->stringToUrl($blog['titulo']) }}/{{ $blog['id'] }}"
-                                                        class="blog-card-two__rm"><span class="icon-right-arrow"></span></a>
+                                                </a>
+                                                <div class="preview-card__content">
+                                                    <span class="preview-card__code">{{ $blog['usuario'] }}</span>
+                                                    <div class="preview-card__title">{{ $blog['titulo'] }}</div>
+                                                    <div class="preview-card__text">
+                                                        {{ $fn->recortar_cadena($blog['descripcion'], 100) }}</div>
+                                                    <a href="/blog/articulo/{{ $fn->stringToUrl($blog['titulo']) }}/{{ $blog['id'] }}"
+                                                        class="preview-card__button">Leer Articulo</a>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-5">
-                                            <a aria-label="Leer más de {{ $blog['titulo'] }}"
-                                                href="/blog/articulo/{{ $fn->stringToUrl($blog['titulo']) }}/{{ $blog['id'] }}"
-                                                class="blog-card-two__image">
-                                                <img src="{{ $blog['carrousel'] }}" alt="Imagen de {{ $blog['titulo'] }}">
-                                                <div class="blog-card-two__image__overlay">
-                                                    <span class="fa-brands fa-readme"></span>
-                                                </div>
-                                            </a>
+
                                         </div>
                                     </div>
                                 </div>

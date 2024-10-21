@@ -10,7 +10,7 @@
 @section('contenido-principal')
     {{-- BANNER --}}
     <section class="page-header">
-        <div class="page-header__bg" style="background-image: url({{ asset('angie/img/banners/galeria.webp') }})"></div>
+        <div class="page-header__bg" style="background-image: url({{ asset('travezo/img/banners/galeria.webp') }})"></div>
         <div class="container">
             <h2 class="page-header__title wow animated fadeInLeft" data-wow-delay="0s" data-wow-duration="1500ms">
                 Galería</h2>

@@ -573,7 +573,7 @@ path {
 }
 
 .trevlo-btn:hover {
-  color: var(--trevlo-primary, #78c245);
+  color: #ffffff;
 }
 
 .trevlo-btn:hover::before {
@@ -2240,7 +2240,7 @@ path {
   top: -174px;
   left: 0;
   right: 0;
-  margin: auto;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2248,10 +2248,10 @@ path {
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-  width: 93%;
+  width: 100%;
   height: 420px;
   border-radius: 30px;
-  z-index: 2;
+  z-index: -1;
   /* background-color: var(--trevlo-primary, #78c245); */
   transform: translateY(0);
   transition: transform 600ms ease;
@@ -2287,8 +2287,7 @@ path {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  background-position: center center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   
 }
@@ -2402,7 +2401,6 @@ path {
   bottom: -1px;
   width: calc(100% + 2.3px);
   height: 43%;
-  clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
   border-radius: 0 0 30px 30px;
   background-color: var(--trevlo-white2, #FAF5EE);
   z-index: -1;
@@ -2416,7 +2414,6 @@ path {
   top: 0;
   left: 0;
   border-radius: 0 0 30px 30px;
-  background-color: var(--trevlo-base, #1e87f3);
   transition: all 0.6s ease;
 }
 
@@ -3367,7 +3364,7 @@ path {
 
 .destination-two__card-btn .trevlo-btn {
   padding: 8px 10.5px;
-  font-size: var(--trevlo-size-md, 12px);
+  font-size: 16px;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -5590,7 +5587,7 @@ path {
   font-weight: 700;
   font-family: "Font Awesome 5 Free";
   content: "\f061";
-  color: var(--trevlo-base, #1e87f3);
+  color: #73bfb6;
   visibility: hidden;
   opacity: 0;
   transition: all 500ms ease;
@@ -5600,7 +5597,7 @@ path {
 .main-menu .main-menu__list li ul li.current>a,
 .main-menu .main-menu__list li ul li:hover>a {
   background-color: var(--trevlo-white2, #FAF5EE);
-  color: var(--trevlo-base, #1e87f3);
+  color: #73bfb6;
 }
 
 .main-menu .main-menu__list li ul li.current>a::after,
@@ -17577,6 +17574,10 @@ body.boxed-wrapper .main-header__booking-btn {
   color: #ffb400;
 }
 
+.text-light-blue{
+  color: #73bfb6;
+}
+
 .oculto {
   display: none;
 }
@@ -17619,7 +17620,7 @@ body.boxed-wrapper .main-header__booking-btn {
 }
 
 .blog-banner {
-  height: 500px;
+  height: 40vh;
 }
 
 .container-exp {
@@ -17632,7 +17633,7 @@ body.boxed-wrapper .main-header__booking-btn {
   }
 
   .blog-banner {
-    height: 350px;
+    height: 20vh;
   }
 }
 
@@ -17842,4 +17843,12 @@ body.boxed-wrapper .main-header__booking-btn {
 
 .cards-transporte img{
   object-fit: contain;
+}
+
+.banner-form button{
+  font-weight: 500;
+}
+
+.banner-form .nav-link.active{
+  color: #0f3556;
 }

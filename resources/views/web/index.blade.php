@@ -5,37 +5,29 @@
 @extends('layouts.master')
 
 @section('metaSEO')
-    <title>Inicio - {{ $nameEnterprise }}</title>
+    <title>{{ $nameEnterprise }} | Viajes Que Inspiran</title>
     <meta name="description"
-        content="{{$nameEnterprise}} es una agencia de viajes caracterizada por el buen servicio y oferta de productos turisticos de calidad en diversos destinos, estamos comprometidos con cumplir los sueños de viaje de nuestros clientes.">
+        content="{{ $nameEnterprise }} es una agencia de viajes caracterizada por el buen servicio y oferta de productos turisticos de calidad en diversos destinos, estamos comprometidos con cumplir los sueños de viaje de nuestros clientes.">
     <meta name="keywords"
-        content="Agencias, Agencias viajes, Viajes, Tours, Niños, Adultos, Experiencias, Visitas, Paquetes Turisticos, Turismo, Vuelos, Ciudades, Lugares, Residencias, Hoteles, Playas, {{$nameEnterprise}}">
+        content="Agencias, Agencias viajes, Viajes, Tours, Niños, Adultos, Experiencias, Visitas, Paquetes Turisticos, Turismo, Vuelos, Ciudades, Lugares, Residencias, Hoteles, Playas, {{ $nameEnterprise }}">
 @endsection
 
 @section('contenido-principal')
     {{-- SLIDER & MOTOR --}}
     <section class="main-slider-one">
         <div class="main-slider-one__carousel trevlo-owl__carousel owl-carousel owl-theme">
-            @if($slider != null)
+            @if ($slider != null)
                 @foreach ($slider as $x => $image)
                     <div class="item">
                         <div class="main-slider-one__image"
                             style="background-image: url(https://app.bookingtrap.com/public/storage/{{ $image['archivo'] }});">
                         </div>
-                        <div class="container">
-                            <div class="main-slider-one__content">
-                                <h5 class="main-slider-one__sub-title">Viajes y tours <img
-                                        src="assets/images/shapes/slider-1-shape-1.png" alt="trevlo"></h5>
-                                <h3 class="main-slider-one__title">Explora el mundo<img
-                                        src="assets/images/shapes/slider-1-shape-2.png" alt="trevlo"></h3>
-                            </div>
-                        </div>
                     </div>
                 @endforeach
-            @else 
+            @else
                 <div class="item">
                     <div class="main-slider-one__image"
-                        style="background-image: url({{ asset('angie/img/banners/banner1.webp') }});">
+                        style="background-image: url({{ asset('travezo/img/banners/banner1.webp') }});">
                     </div>
                     <div class="container">
                         <div class="main-slider-one__content">
@@ -68,13 +60,13 @@
                     @foreach ($promocionesExpress as $promocion)
                         <div class="pricing-page__carousel-item item">
                             <div class="pricing-card">
-                               
-                                    <div class="pricing-card__image-wrapper">
-                                        <div class="pricing-card__image"
-                                            style="background-image: url('{{ $promocion['imagen'] }}');">
-                                        </div>
+
+                                <div class="pricing-card__image-wrapper">
+                                    <div class="pricing-card__image"
+                                        style="background-image: url('{{ $promocion['imagen'] }}');">
                                     </div>
-                               
+                                </div>
+
                                 <h4 class="mt-5 text-center title_promo_card">{{ $promocion['promocion'] }}</h2>
                                     <div class="index_card_promo_footer">
                                         <div class="details-promo">
@@ -150,7 +142,7 @@
                                     {{-- FRONT --}}
                                     <div class="tour-type-two__box__front">
                                         <span class="blog-card-two__rm mb-2"><i aria-hidden="true"
-                                            class="icon-right-arrow"></i>
+                                                class="icon-right-arrow"></i>
                                         </span>
                                         @if ($favoritosTour['promocion'])
                                             <div class="promo-exp">
@@ -183,26 +175,19 @@
                                         <div class="details-exp">
 
                                             <span>
-                                                <i aria-hidden="true" class="fa-regular fa-clock text-yellow"></i>
+                                                <i aria-hidden="true" class="fa-regular fa-clock text-light-blue"></i>
                                                 {{ $favoritosTour['cantidad_dias'] }}
-                                                {{ $favoritosTour['cantidad_dias'] > 1
-                                                    ? ($favoritosTour['tipoDuracion'] == 0
-                                                        ? '
-                                                                                                                                                                                                                                                                                                                                                                                    días'
-                                                        : ' horas')
-                                                    : ($favoritosTour['tipoDuracion'] == 0
-                                                        ? ' día'
-                                                        : ' hora') }}
+                                                {{ $favoritosTour['cantidad_dias'] > 1 ? ($favoritosTour['tipoDuracion'] == 0 ? 'días' : ' horas') : ($favoritosTour['tipoDuracion'] == 0 ? ' día' : ' hora') }}
                                             </span>
                                             <br>
                                             <span class="index_card_experiencias_ciudad_container">
-                                                <i aria-hidden="true" class="fa-solid fa-location-dot text-yellow"></i>
+                                                <i aria-hidden="true" class="fa-solid fa-location-dot text-light-blue"></i>
                                                 {{ $favoritosTour['estado_comercial'] }} ,
                                                 {{ $favoritosTour['ciudad_comercial'] }}
                                             </span>
                                             <p class="tour-type-two__box__front__text mb-3">
                                                 Desde: <br> <i aria-hidden="true"
-                                                    class="fa-solid fa-dollar-sign text-yellow"></i>
+                                                    class="fa-solid fa-dollar-sign text-light-blue"></i>
                                                 <strong>
                                                     {{ $favoritosTour['precioformato'] }}
                                                     {{ $favoritosTour['iso'] }}
@@ -246,124 +231,133 @@
     @endif
 
     <!-- {{-- MAS EXP --}}
-                        @if ($countOtrasExperiencias != null)
-                            <section class="tour-listing-one contenedor-otras-exp"
-                                style="background-image: url({{ asset('assets/images/backgrounds/tour-bg-1.jpg') }});">
-                                <div class="container">
-                                    {{-- TITULO --}}
-                                    <div class="sec-title text-center">
-                                        <p class="sec-title__tagline">Te puede interesar</p>
-                                        <h2 class="sec-title__title">Más de nuestras experiencias</h2>
-                                    </div>
-                                    {{-- CARD --}}
-                                    <div
-                                        class="tour-listing-one__carousel trevlo-owl__carousel trevlo-owl__carousel--basic-nav owl-theme owl-carousel">
-                                        @foreach ($otrasExperiencias as $i => $experiencia)
-    <div class="tour-listing-one__carousel-item item">
-                                                <div class="tour-type-two__box">
-                                                    <div class="tour-type-two__box__flipper">
-                                                        {{-- FRONT --}}
-                                                        <div class="tour-type-two__box__front">
-                                                            {{-- PRICE --}}
-                                                            <div class="price-exp">
-                                                                <p class="tour-type-two__box__front__text mb-3">
-                                                                    Desde: <br> <i aria-hidden="true"
-                                                                        class="fa-solid fa-dollar-sign text-yellow"></i>
-                                                                    <strong>
-                                                                        {{ $experiencia['precioformato'] }}
-                                                                        {{ $experiencia['iso'] }}
-                                                                    </strong>
-                                                                </p>
-                                                            </div>
-                                                            {{-- DETAILS --}}
-                                                            <div class="details-exp">
-                                                                <a aria-label="Más información de {{ $favoritosTour['nombre'] }}">
-                                                                    <h5 class="tour-type-two__box__front__title">
-                                                                        {{ $fn->recortar_cadena($experiencia['nombre'], 30) }}
-                                                                    </h5>
-                                                                </a>
-                                                                <span>
-                                                                    <i aria-hidden="true" class="fa-regular fa-clock text-yellow"></i>
-                                                                    {{ $experiencia['cantidad_dias'] }}
-                                                                    {{ $experiencia['cantidad_dias'] > 1
-                                                                        ? ($experiencia['tipoDuracion'] == 0
-                                                                            ? ' días'
-                                                                            : ' horas')
-                                                                        : ($experiencia['tipoDuracion'] == 0
-                                                                            ? ' día'
-                                                                            : ' hora') }}
-                                                                </span>
-                                                                <br>
-                                                                <span>
-                                                                    <i aria-hidden="true" class="fa-solid fa-location-dot text-yellow"></i>
-                                                                    {{ $experiencia['estado_comercial'] }} ,
-                                                                    {{ $experiencia['ciudad_comercial'] }}
-                                                                </span>
-                                                                <br>
-                                                                <span class="blog-card-two__rm mb-2"><i aria-hidden="true"
-                                                                        class="icon-right-arrow"></i>
-                                                                </span>
-                                                            </div>
-                                                            {{-- IMG --}}
-                                                            <div class="tour-type-two__box__front__image">
-                                                                <a aria-label="Más información de {{ $favoritosTour['nombre'] }}">
-                                                                    <img src="{{ $experiencia['imagen'] }}"
-                                                                        alt="Imagen de {{ $experiencia['nombre'] }}">
-                                                                </a>
-                                                            </div>
+                                            @if ($countOtrasExperiencias != null)
+                                                <section class="tour-listing-one contenedor-otras-exp"
+                                                    style="background-image: url({{ asset('assets/images/backgrounds/tour-bg-1.jpg') }});">
+                                                    <div class="container">
+                                                        {{-- TITULO --}}
+                                                        <div class="sec-title text-center">
+                                                            <p class="sec-title__tagline">Te puede interesar</p>
+                                                            <h2 class="sec-title__title">Más de nuestras experiencias</h2>
                                                         </div>
-                                                        {{-- BACK --}}
-                                                        <div class="tour-type-two__box__back">
-                                                            <div class="tour-type-two__box__back__image">
-                                                                <img src="{{ $experiencia['imagen'] }}"
-                                                                    alt="Imagen de {{ $experiencia['nombre'] }}">
-                                                            </div>
-                                                            <div class="tour-type-two__box__back__content">
-                                                                <h5 class="tour-type-two__box__back__title">
-                                                                    {{ $fn->recortar_cadena($experiencia['nombre'], 30) }}</h5>
-                                                                <p class="tour-type-two__box__back__text">
-                                                                    {{ $fn->recortar_cadena($experiencia['descripcion'], 100) }}
-                                                                </p>
-                                                                <br>
-                                                                <a aria-label="Más información de {{ $experiencia['nombre'] }}"
-                                                                    href="{{ $experiencia['link'] }}"
-                                                                    class="trevlo-btn trevlo-btn--base"><span>Ver
-                                                                        más</span></a>
-                                                            </div>
+                                                        {{-- CARD --}}
+                                                        <div
+                                                            class="tour-listing-one__carousel trevlo-owl__carousel trevlo-owl__carousel--basic-nav owl-theme owl-carousel">
+                                                            @foreach ($otrasExperiencias as $i => $experiencia)
+    <div class="tour-listing-one__carousel-item item">
+                                                                    <div class="tour-type-two__box">
+                                                                        <div class="tour-type-two__box__flipper">
+                                                                            {{-- FRONT --}}
+                                                                            <div class="tour-type-two__box__front">
+                                                                                {{-- PRICE --}}
+                                                                                <div class="price-exp">
+                                                                                    <p class="tour-type-two__box__front__text mb-3">
+                                                                                        Desde: <br> <i aria-hidden="true"
+                                                                                            class="fa-solid fa-dollar-sign text-yellow"></i>
+                                                                                        <strong>
+                                                                                            {{ $experiencia['precioformato'] }}
+                                                                                            {{ $experiencia['iso'] }}
+                                                                                        </strong>
+                                                                                    </p>
+                                                                                </div>
+                                                                                {{-- DETAILS --}}
+                                                                                <div class="details-exp">
+                                                                                    <a aria-label="Más información de {{ $favoritosTour['nombre'] }}">
+                                                                                        <h5 class="tour-type-two__box__front__title">
+                                                                                            {{ $fn->recortar_cadena($experiencia['nombre'], 30) }}
+                                                                                        </h5>
+                                                                                    </a>
+                                                                                    <span>
+                                                                                        <i aria-hidden="true" class="fa-regular fa-clock text-yellow"></i>
+                                                                                        {{ $experiencia['cantidad_dias'] }}
+                                                                                        {{ $experiencia['cantidad_dias'] > 1
+                                                                                            ? ($experiencia['tipoDuracion'] == 0
+                                                                                                ? ' días'
+                                                                                                : ' horas')
+                                                                                            : ($experiencia['tipoDuracion'] == 0
+                                                                                                ? ' día'
+                                                                                                : ' hora') }}
+                                                                                    </span>
+                                                                                    <br>
+                                                                                    <span>
+                                                                                        <i aria-hidden="true" class="fa-solid fa-location-dot text-yellow"></i>
+                                                                                        {{ $experiencia['estado_comercial'] }} ,
+                                                                                        {{ $experiencia['ciudad_comercial'] }}
+                                                                                    </span>
+                                                                                    <br>
+                                                                                    <span class="blog-card-two__rm mb-2"><i aria-hidden="true"
+                                                                                            class="icon-right-arrow"></i>
+                                                                                    </span>
+                                                                                </div>
+                                                                                {{-- IMG --}}
+                                                                                <div class="tour-type-two__box__front__image">
+                                                                                    <a aria-label="Más información de {{ $favoritosTour['nombre'] }}">
+                                                                                        <img src="{{ $experiencia['imagen'] }}"
+                                                                                            alt="Imagen de {{ $experiencia['nombre'] }}">
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            {{-- BACK --}}
+                                                                            <div class="tour-type-two__box__back">
+                                                                                <div class="tour-type-two__box__back__image">
+                                                                                    <img src="{{ $experiencia['imagen'] }}"
+                                                                                        alt="Imagen de {{ $experiencia['nombre'] }}">
+                                                                                </div>
+                                                                                <div class="tour-type-two__box__back__content">
+                                                                                    <h5 class="tour-type-two__box__back__title">
+                                                                                        {{ $fn->recortar_cadena($experiencia['nombre'], 30) }}</h5>
+                                                                                    <p class="tour-type-two__box__back__text">
+                                                                                        {{ $fn->recortar_cadena($experiencia['descripcion'], 100) }}
+                                                                                    </p>
+                                                                                    <br>
+                                                                                    <a aria-label="Más información de {{ $experiencia['nombre'] }}"
+                                                                                        href="{{ $experiencia['link'] }}"
+                                                                                        class="trevlo-btn trevlo-btn--base"><span>Ver
+                                                                                            más</span></a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+    @endforeach
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-    @endforeach
-                                    </div>
-                                </div>
-                            </section>
-                        @endif -->
+                                                </section>
+                                            @endif -->
 
     <section class="bg-dark-gradient">
         <div class="container py-5 ide">
             <div class="contenedorInformativo">
                 <div class="">
-                    <img src="{{ asset('angie/img/logo1.png') }}" alt="{{ $nameEnterprise }}">
-                    <h2>¿Por qué {{ $nameEnterprise }} es diferente?</h2>
+                    <img src="{{ asset('travezo/img/logo_travezo.webp') }}" alt="{{ $nameEnterprise }}">
+                    <h2 class="fw-500">¿Por qué {{ $nameEnterprise }} es diferente?</h2>
                 </div>
                 <div class="itemsAliningItems">
                     <span>
                         <i class="fas fa-mosque"></i>
                     </span>
-                    <h2 class="text-center">Es una agencia de viajes dedicada a diseñar experiencias únicas e inolvidables. Ofrecemos itinerarios personalizados que combinan aventura, cultura y confort, para transformar cada viaje en una experiencia de vida.</h2>
+                    <span class="text-center text_desc">Es una agencia de viajes dedicada a diseñar experiencias únicas e
+                        inolvidables.
+                        Ofrecemos itinerarios personalizados que combinan aventura, cultura y confort, para transformar cada
+                        viaje en una experiencia de vida.</span>
                 </div>
                 <div class="itemsAliningItems">
                     <span><i class="fas fa-compress-arrows-alt"></i></span>
-                    <h2 class="text-center">Ofreciendo momentos memorables que enriquecen y redefinen tu concepto de explorar el mundo.</h2>
+                    <span class="text-center text_desc">Ofreciendo momentos memorables que enriquecen y redefinen tu
+                        concepto de
+                        explorar el mundo.</span>
                 </div>
                 <div class="itemsAliningItems">
                     <span><i class="far fa-lightbulb"></i></span>
-                    <h2 class="text-center">Diseñamos experiencias de viaje que van más allá de lo convencional para ti.</h2>
+                    <span class="text-center text_desc">Diseñamos experiencias de viaje que van más allá de lo convencional
+                        para ti.
+                    </span>
                 </div>
                 <div class="itemsAliningItems">
                     <span><i class="fas fa-vihara"></i></span>
-                    <h2 class="text-center">Se especializa en construir aventuras únicas, con viajes a medida que convierten cada destino en una historia personal y vibrante.</h2>
+                    <span class="text-center text_desc">Se especializa en construir aventuras únicas, con viajes a medida
+                        que
+                        convierten cada destino en una historia personal y vibrante.</span>
                 </div>
             </div>
         </div>
@@ -492,7 +486,7 @@
             </div>
         </div>
     </section>
-    
+
     {{-- HOME HOTEL --}}
     @if ($hotelesHomeData != null)
         <section class="bg_cuadros_verdes2">
@@ -604,104 +598,92 @@
     @endif
 
     <section>
-        <section class="faq-section py-5" style="background: linear-gradient(#00000042, #00000057), url({{ asset('angie/img/faq.webp') }}) center center; background-attachment: fixed; background-repeat: no-repeat; background-size: cover;">
+        <section class="faq-section py-5"
+            style="background: linear-gradient(#00000042, #00000057), url({{ asset('travezo/img/faq.webp') }}) center center; background-attachment: fixed; background-repeat: no-repeat; background-size: cover;">
             <div class="container">
-        
-              <div class="w-lg-50 mx-auto">
-                <h6 class="mb-2">FAQ | Preguntas frecuentes</h6>
-                <h2 class="mb-5">¿Tiene alguna pregunta?</h2>
-                <div class="accordion accordion-flush" id="accordionExample">
-        
-                  <!-- 1: coll1 -->
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <!--   data-bs-target="#coll1",  controls="coll1", id="coll1", aria-expanded="true"      -->
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#coll1" aria-expanded="true" aria-controls="coll1">
-                        <h5> Lorem ipsum dolor sit amet consectetur adipisicing.?</h5>
-                      </button>
-                    </h2>
-                    <!-- show : by default Always open -->
-                    <div id="coll1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis vitae asperiores itaque dolor consequatur nam fuga, nihil blanditiis saepe!
-                        </p>
-                      </div>
+
+                <div class="w-lg-50 mx-auto">
+                    <h6 class="mb-2">FAQ | Preguntas frecuentes</h6>
+                    <h2 class="mb-5">¿Tiene Alguna Pregunta?</h2>
+                    <div class="accordion accordion-flush" id="accordionExample">
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#coll1" aria-expanded="true" aria-controls="coll1">
+                                    <h5>Lorem ipsum dolor sit amet consectetur. </h5>
+                                </button>
+                            </h2>
+
+                            <div id="coll1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis vitae
+                                        asperiores itaque dolor consequatur nam fuga, nihil blanditiis saepe!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#coll2" aria-expanded="false" aria-controls="coll2">
+                                    <h5>Lorem ipsum dolor sit amet consectetur. </h5>
+                                </button>
+                            </h2>
+                            <div id="coll2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est in voluptatum
+                                        dignissimos. Deserunt blanditiis eaque aut temporibus nemo ratione tenetur sunt
+                                        dicta at quidem.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#coll3" aria-expanded="false" aria-controls="coll3">
+                                    <h5>Lorem ipsum dolor sit amet consectetur. </h5>
+                                </button>
+                            </h2>
+                            <div id="coll3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dolor recusandae,
+                                        earum accusamus voluptatibus, suscipit mollitia officiis veritatis numquam enim
+                                        totam, iure soluta!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#coll4" aria-expanded="false" aria-controls="coll4">
+                                    <h5>Lorem ipsum dolor sit amet consectetur. </h5>
+                                </button>
+                            </h2>
+                            <div id="coll4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptates
+                                        architecto provident placeat laborum, sequi culpa voluptatibus, dolore maxime porro
+                                        fuga enim. Laudantium dolore commodi amet quis non!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                  </div>
-        
-                  <!-- 2: coll2 -->
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <!--       collapsed,   aria-expanded="false"   -->
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#coll2" aria-expanded="false" aria-controls="coll2">
-                        <h5> Lorem ipsum dolor sit.?</h5>
-                      </button>
-                    </h2>
-                    <div id="coll2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est in voluptatum dignissimos. Deserunt blanditiis eaque aut temporibus nemo ratione tenetur sunt dicta at quidem.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-        
-                  <!-- 3: coll3 -->
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#coll3" aria-expanded="false" aria-controls="coll3">
-                        <h5> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, debitis?</h5>
-                      </button>
-                    </h2>
-                    <div id="coll3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dolor recusandae, earum accusamus voluptatibus, suscipit mollitia officiis veritatis numquam enim totam, iure soluta!
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-        
-                  <!-- 4: coll4 -->
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <!--   target="#coll4",  id="coll4"  -->
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#coll4" aria-expanded="false" aria-controls="coll4">
-                        <h5> Lorem ipsum dolor sit amet consectetur adipisicing?</h5>
-                      </button>
-                    </h2>
-                    <div id="coll4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptates architecto provident placeat laborum, sequi culpa voluptatibus, dolore maxime porro fuga enim. Laudantium dolore commodi amet quis non!
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-        
-                  <!-- 5: coll5 -->
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <!--   target="#coll5",  id="coll5"  -->
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#coll5" aria-expanded="false" aria-controls="coll5">
-                        <h5> Lorem ipsum dolor sit?</h5>
-                      </button>
-                    </h2>
-                    <div id="coll5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, reiciendis unde! Eveniet exercitationem laboriosam nostrum dolores libero vitae voluptates magnam earum saepe quos ab modi nemo iste, cum assumenda.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-        
                 </div>
-              </div>
-        
+
             </div>
-          </section>
+        </section>
     </section>
 
 
@@ -727,51 +709,23 @@
                 <div id="blog"
                     class="blog-two__carousel trevlo-owl__carousel trevlo-owl__carousel--basic-nav owl-theme owl-carousel">
                     @foreach ($articulosRecientes as $b => $blog)
-                        <div class="item">
-                            <div class="blog-card-two">
-                                <div class="row d-flex align-items-center">
-                                    <div class="col-md-7">
-                                        <div class="blog-card-two__content">
-                                            <h3 class="blog-card-two__title">
-                                                <a aria-label="Leer más de {{ $blog['titulo'] }}"
-                                                    href="/blog/articulo/{{ $fn->stringToUrl($blog['titulo']) }}/{{ $blog['id'] }}">
-                                                    {{ $fn->recortar_cadena($blog['titulo'], 30) }}
-                                                </a>
-                                            </h3>
-                                            <p class="blog-cat">
-                                                <i aria-hidden="true" class="fa-regular fa-bookmark"></i>
-                                                {{ $blog['categoria'] }}
-                                            </p>
-                                            <p class="blog-card-two__text">
-                                                {{ $fn->recortar_cadena($blog['descripcion'], 60) }}
-                                            </p>
-                                            <div class="blog-card-two__meta">
-                                                <div class="blog-card-two__author">
-                                                    <img src="{{ asset('angie/img/logo.png') }}"
-                                                        alt="User blog {{ $nameEnterprise }}">
-                                                    <h5 class="blog-card-two__author__name">
-                                                        <a aria-label="Leer más de {{ $blog['titulo'] }}"
-                                                            href="/blog/articulo/{{ $fn->stringToUrl($blog['titulo']) }}/{{ $blog['id'] }}">
-                                                            Por: {{ $blog['usuario'] }}
-                                                        </a>
-                                                    </h5>
-                                                </div>
-                                                <a aria-label="Leer más de {{ $blog['titulo'] }}"
-                                                    href="/blog/articulo/{{ $fn->stringToUrl($blog['titulo']) }}/{{ $blog['id'] }}"
-                                                    class="blog-card-two__rm"><span class="icon-right-arrow"></span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-5">
-                                        <a aria-label="Leer más de {{ $blog['titulo'] }}"
-                                            href="/blog/articulo/{{ $fn->stringToUrl($blog['titulo']) }}/{{ $blog['id'] }}"
-                                            class="blog-card-two__image">
-                                            <img src="{{ $blog['carrousel'] }}" alt="Imagen de {{ $blog['titulo'] }}">
-                                            <div class="blog-card-two__image__overlay">
-                                                <span class="fa-brands fa-readme"></span>
+                        <div class="row mt-5">
+                            <div class="preview-card">
+                                <div class="preview-card__wrp">
+                                    <div class="preview-card__item">
+                                        <a href="/blog/articulo/{{ $fn->stringToUrl($blog['titulo']) }}/{{ $blog['id'] }}">
+                                            <div class="preview-card__img">
+                                                <img src="{{ $blog['carrousel'] }}" alt="{{ $blog['titulo'] }}">
                                             </div>
                                         </a>
+                                        <div class="preview-card__content">
+                                            <span class="preview-card__code">{{ $blog['usuario'] }}</span>
+                                            <div class="preview-card__title">{{ $blog['titulo'] }}</div>
+                                            <div class="preview-card__text">{{ $fn->recortar_cadena($blog['descripcion'], 100) }}</div>
+                                            <a href="/blog/articulo/{{ $fn->stringToUrl($blog['titulo']) }}/{{ $blog['id'] }}" class="preview-card__button">Leer Articulo</a>
+                                        </div>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -845,14 +799,15 @@
         }
 
         /* .blog-card-two__rm{
-                position: absolute;
-                bottom: 0;
-                right: 3px;
-                z-index: 99;
-            } */
+                                    position: absolute;
+                                    bottom: 0;
+                                    right: 3px;
+                                    z-index: 99;
+                                } */
         #fechas {
             background-color: #fff;
         }
+
         .nav-link.active {
             background: #ffffffc7 !important;
         }
@@ -862,7 +817,7 @@
         }
 
         .trevlo-btn::after {
-            background-color: var(--colorTerceroPalete);
+            background-color: #73bfb6;
             color: #fff !important;
         }
 
@@ -871,7 +826,7 @@
         }
 
         .ide::before {
-            content: url({{ asset('angie/img/triangle.svg') }});
+            content: url({{ asset('travezo/img/triangle.svg') }});
             left: -3%;
             position: absolute;
             top: -1%;
@@ -880,7 +835,7 @@
         }
 
         .ide::after {
-            content: url({{ asset('angie/img/triangle-circle2.svg') }});
+            content: url({{ asset('travezo/img/triangle-circle2.svg') }});
             right: -6%;
             position: absolute;
             top: 48%;
@@ -889,7 +844,7 @@
         }
 
         .contenedorInformativo::before {
-            content: url({{ asset('angie/img/triangle-circle.svg') }});
+            content: url({{ asset('travezo/img/triangle-circle.svg') }});
             right: 93%;
             position: absolute;
             top: 88%;

@@ -9,7 +9,7 @@
 
 @section('contenido-principal')
     <section class="page-header">
-        <div class="page-header__bg" style="background-image: url({{ asset('angie/img/banners/nosotros.webp') }})"></div>
+        <div class="page-header__bg" style="background-image: url({{ asset('travezo/img/banners/nosotros.webp') }})"></div>
         <!-- /.page-header__bg -->
         <div class="container">
             <h2 class="page-header__title wow animated fadeInLeft" data-wow-delay="0s" data-wow-duration="1500ms">Nosotros</h2>
@@ -116,115 +116,6 @@
             </div>
         </div>
     </section>
-
-    <section class="offer-one" style="background-image: url('assets/images/backgrounds/offer-1-bg.png');">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-5 col-lg-6">
-                    <div class="offer-one__content sec-title">
-                        <h2 style="font-size: 30px;" class="offer-one__heading sec-title__heading">Empoderando a Mujeres para el Éxito y el Equilibrio</h2>
-                        <p style="font-weight: bold;font-size: 15px;" class="offer-one__text">Originalmente nuestra empresa está enfocada para mujeres con las que nos identificamos. Mujeres independientes, ávidas de triunfar, generar 
-                            dinero, ¡emprender! Pero también de educar, amar a la familia y consentirles, lo que con horarios de oficina se vuelve imposible. 
-                            Hoy en día nos impulsa reactivar la economía y es por esto que ofrecemos una carrera en el Turismo, una red de apoyo integral y una posibilidad 
-                            de tener un ingreso extra empezando una carrera de medio tiempo o tiempo completo, tú decides.</p>
-                       {{--  <div class="offer-one__btn-box wow animated fadeInUp" data-wow-delay="0.1s"
-                            data-wow-duration="1500ms">
-                            <a href="tour-listing-side-filter-right.html"
-                                class="offer-one__btn trevlo-btn trevlo-btn--primary"><span>Start Booking</span></a>
-                        </div> --}}
-                    </div>
-                </div>
-                <div class="col-xl-7 col-lg-6 wow animated fadeInRight" data-wow-delay="0.1s" data-wow-duration="1500ms">
-                    <div class="offer-one__img-box">
-                        <div class="offer-one__inner-img-box">
-                            <img src="{{ asset('assets/images/nosotros/imagen_nosotros7.webp') }}" alt="offer" class="offer-one__img-one">
-                            <img src="{{ asset('assets/images/nosotros/imagen_nosotros6.webp') }}" alt="offer" class="offer-one__img-two">
-                            <img src="assets/images/offer/offer-1-3.png" alt="offer" class="offer-one__img-three">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="offer-one__shape-one trevlo-splax"
-            data-para-options='{ "orientation": "left", "scale": 1.5, "overflow": true }'
-            style="background-image: url('assets/images/shapes/offer-shape-1.png');"></div><!-- /.bg -->
-        <div class="offer-one__shape-two trevlo-splax"
-            data-para-options='{ "orientation": "right", "scale": 1.5, "overflow": true }'
-            style="background-image: url('assets/images/shapes/offer-shape-2.png');"></div><!-- /.bg -->
-        <div class="offer-one__bottom-bg" style="background-image: url('assets/images/offer/offer-1-4.png');"></div>
-        <!-- /.bg -->
-    </section>
-    <!-- Offer End Start -->
-
-    <!-- Counter One Start -->
-    <section class="counter-one">
-        <div class="counter-one__bg-box"></div><!-- /.counter-one__bg-box -->
-        <div class="counter-one__main-content">
-            <div class="container">
-                <div class="counter-one__container container-fluid">
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-3 col-6 wow animated fadeInUp" data-wow-delay="0.1s"
-                            data-wow-duration="1500ms">
-                            <div class="counter-box @@extraClassName">
-                                <div class="counter-box__icon">
-                                    <span class="icon-happy-Travel"></span>
-                                </div><!-- /.counter-box__icon -->
-                                <div class="counter-box__inner sec-title count-box">
-                                    <h3 class="counter-box__count-text counter-box__count-text--one sec-title__heading count-text"
-                                        data-stop="30.3" data-speed="1500">00</h3>
-                                    <h3 class="counter-box__count-text sec-title__heading">k</h3>
-                                </div><!-- /.counter-box__inner -->
-                                <p class="counter-box__title">Viajeros felices</p>
-                            </div>
-                        </div><!-- /.col-xl-3 col-lg-3 col-6 -->
-                        <div class="col-xl-3 col-lg-3 col-6 wow animated fadeInUp" data-wow-delay="0.3s"
-                            data-wow-duration="1500ms">
-                            <div class="counter-box @@extraClassName">
-                                <div class="counter-box__icon">
-                                    <span class="icon-tent-1"></span>
-                                </div><!-- /.counter-box__icon -->
-                                <div class="counter-box__inner sec-title count-box">
-                                    <h3 class="counter-box__count-text counter-box__count-text--one sec-title__heading count-text"
-                                        data-stop="40.5" data-speed="1500">00</h3>
-                                    <h3 class="counter-box__count-text sec-title__heading">k</h3>
-                                </div><!-- /.counter-box__inner -->
-                                <p class="counter-box__title">Destinos para Acampar</p>
-                            </div>
-                        </div><!-- /.col-xl-3 col-lg-3 col-6 -->
-                        <div class="col-xl-3 col-lg-3 col-6 wow animated fadeInUp" data-wow-delay="0.5s"
-                            data-wow-duration="1500ms">
-                            <div class="counter-box @@extraClassName">
-                                <div class="counter-box__icon">
-                                    <span class="icon-satisfied"></span>
-                                </div><!-- /.counter-box__icon -->
-                                <div class="counter-box__inner sec-title count-box">
-                                    <h3 class="counter-box__count-text counter-box__count-text--one sec-title__heading count-text"
-                                        data-stop="94.9" data-speed="1500">00</h3>
-                                    <h3 class="counter-box__count-text sec-title__heading">%</h3>
-                                </div><!-- /.counter-box__inner -->
-                                <p class="counter-box__title">Tasa de satisfacción</p>
-                            </div>
-                        </div><!-- /.col-xl-3 col-lg-3 col-6 -->
-                        <div class="col-xl-3 col-lg-3 col-6 wow animated fadeInUp" data-wow-delay="0.7s"
-                            data-wow-duration="1500ms">
-                            <div class="counter-box counter-box--no-border">
-                                <div class="counter-box__icon">
-                                    <span class="icon-online-chat-1"></span>
-                                </div><!-- /.counter-box__icon -->
-                                <div class="counter-box__inner sec-title count-box">
-                                    <h3 class="counter-box__count-text counter-box__count-text--one sec-title__heading count-text"
-                                        data-stop="6.50" data-speed="1500">00</h3>
-                                    <h3 class="counter-box__count-text sec-title__heading">+</h3>
-                                </div><!-- /.counter-box__inner -->
-                                <p class="counter-box__title">Años de experiencia</p>
-                            </div>
-                        </div><!-- /.col-xl-3 col-lg-3 col-6 -->
-                    </div>
-                </div><!-- /.counter-one__container container-fluid -->
-            </div>
-        </div><!-- /.counter-one__main-content -->
-    </section>
-    <!-- Counter One End -->
 @endsection
 
 @section('css')

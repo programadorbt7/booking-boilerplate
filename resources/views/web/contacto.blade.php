@@ -12,7 +12,7 @@
     {{-- BANNER --}}
     <section class="page-header">
         <div class="page-header__bg"
-            style="background-image: url({{ asset('angie/img/banners/contacto.webp') }})"></div>
+            style="background-image: url({{ asset('travezo/img/banners/contacto.webp') }})"></div>
         <div class="container">
             <h2 class="page-header__title wow animated fadeInLeft" data-wow-delay="0s" data-wow-duration="1500ms">
                 Contáctanos
@@ -37,7 +37,7 @@
                             <div class="sidebar-blog__single sidebar-blog__single--posts wow animated fadeInUp"
                                 data-wow-delay="0.1s" data-wow-duration="1500ms" style="padding: 10px">
                                 <h4 class="sidebar-blog__title text-center">
-                                    <img style="width: 150px; margin-top: 25px;" src="{{ asset('angie/img/logo.png') }}"
+                                    <img style="width: 150px; margin-top: 25px;" src="{{ asset('travezo/img/logo_travezo.webp') }}"
                                         alt="Logo {{ $nameEnterprise }}">
                                 </h4>
                                 <ul class="sidebar-blog__posts ">

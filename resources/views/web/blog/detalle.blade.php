@@ -16,16 +16,7 @@
     <div class="blog-details-page section-space-top">
         <div class="container">
             <div class="blog-details-page__row row">
-                {{-- BTN GALLERY --}}
-                <div class="row justify-content-center">
-                    <div class="col-md-3">
-                        <a href="#blog-gallery" class="tour-listing-details__sidebar-btn trevlo-btn trevlo-btn--base">
-                            <span>
-                                Ver Galería
-                            </span>
-                        </a>
-                    </div>
-                </div>
+
                 {{-- DESCRIPCION --}}
                 <div class="col-lg-12">
                     <div class="blog-details">

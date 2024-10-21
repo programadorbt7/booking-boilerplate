@@ -21,7 +21,7 @@
     {{-- BANNER --}}
     <section class="page-header">
         <div class="page-header__bg"
-            style="background-image: url({{ asset('angie/img/banners/civitatis.webp') }}); background-position: center;"></div>
+            style="background-image: url({{ asset('travezo/img/banners/civitatis.webp') }}); background-position: center;"></div>
         <div class="container">
             <h2 class="page-header__title wow animated fadeInLeft" data-wow-delay="0s" data-wow-duration="1500ms">
                 Actividades en {{ ucfirst($nombreDestino) }}

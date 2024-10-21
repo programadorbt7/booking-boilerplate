@@ -47,7 +47,7 @@ class AppServiceProvider extends ServiceProvider
 
             $url                    = Request::root();
             $sitioweb               = json_decode($sw->InfoWebEmpresa());
-            $nameEnterprise         = 'Anji Creating Life Experience';
+            $nameEnterprise         = 'Travezo';
             $countMegaTravel        = $sitioweb[0]->circuitos;
             $megaTravel             = $sw->circuitosMegaTravel();
             $hasImage               = $sw->circuitoMegaHasImage();

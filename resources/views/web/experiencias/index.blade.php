@@ -22,7 +22,7 @@
     {{-- BANNER --}}
     <section class="page-header">
         <div class="page-header__bg"
-            style="background-image: url({{ asset('angie/img/banners/experiencias2.webp') }})"></div>
+            style="background-image: url({{ asset('travezo/img/banners/experiencias2.webp') }})"></div>
         <div class="container">
             <h2 class="page-header__title wow animated fadeInLeft" data-wow-delay="0s" data-wow-duration="1500ms">
                 Experiencias
@@ -113,7 +113,7 @@
                                             @endfor
                                         @else
                                             categoria_{{ $fn->eliminar_acentos($categoriaExperiencias) }} @endif"
-                                        data-length="{{ $i }}" data-wow-delay="100ms">
+                                        data-length="{{ $i }}" data-wow-delay="100ms" style="margin-top: 20px !important">
                                         <div class="tour-type-two__box">
                                             <div class="tour-type-two__box__flipper">
                                                 {{-- FRONT --}}

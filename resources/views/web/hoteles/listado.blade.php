@@ -19,7 +19,7 @@
     {{-- BANNER --}}
     <section class="page-header">
         <div class="page-header__bg"
-            style="background-image: url({{ asset('angie/img/banners/hotels.webp') }})"></div>
+            style="background-image: url({{ asset('travezo/img/banners/hotels.webp') }})"></div>
         <div class="container">
             <h2 class="page-header__title wow animated fadeInLeft" data-wow-delay="0s" data-wow-duration="1500ms"
                 id="destinoHotelero">

@@ -6,15 +6,15 @@
 
 @section('metaSEO')
     <title>Blog en {{ ucfirst(str_replace(['-'], ' ', $nombreCategoria)) }} - {{ $nameEnterprise }}</title>
-    <meta name="description" content="Blog oficial de {{$nameEnterprise}}">
+    <meta name="description" content="Blog oficial de {{ $nameEnterprise }}">
     <meta name="keywords"
-        content="blog de {{$nameEnterprise}}, blog de viajes, viajar, blog, blogs, blog de {{$nameEnterprise}}, noticias de {{$nameEnterprise}}, viajes, aventuras, tours, lugares, ciudades, ciudad">
+        content="blog de {{ $nameEnterprise }}, blog de viajes, viajar, blog, blogs, blog de {{ $nameEnterprise }}, noticias de {{ $nameEnterprise }}, viajes, aventuras, tours, lugares, ciudades, ciudad">
 @endsection
 
 @section('contenido-principal')
     {{-- BANNER --}}
     <section class="page-header">
-        <div class="page-header__bg" style="background-image: url({{ asset('angie/img/banners/cateblog.webp') }})"></div>
+        <div class="page-header__bg" style="background-image: url({{ asset('travezo/img/banners/cateblog.webp') }})"></div>
         <div class="container">
             <h2 class="page-header__title wow animated fadeInLeft" data-wow-delay="0s" data-wow-duration="1500ms">
                 Entérate de "{{ ucfirst(str_replace(['-'], ' ', $nombreCategoria)) }}"</h2>
@@ -64,51 +64,27 @@
                         <div class="row gutter-y-50">
                             @if ($listaCategoriaArticulo['total'] > 0)
                                 @foreach ($listaCategoriaArticulo['data'] as $articulo)
-                                    <div class="blog-card-two">
-                                        <div class="row d-flex align-items-center">
-                                            <div class="col-md-7">
-                                                <div class="blog-card-two__content">
-                                                    <h3 class="blog-card-two__title">
-                                                        <a aria-label="Leer más de {{ $articulo['titulo'] }}"
-                                                            href="/blog/articulo/{{ $fn->stringToUrl($articulo['titulo']) }}/{{ $articulo['id'] }}">
-                                                            {{ $fn->recortar_cadena($articulo['titulo'], 30) }}
-                                                        </a>
-                                                    </h3>
-                                                    <p class="blog-cat">
-                                                        <i aria-hidden="true" class="fa-regular fa-bookmark"></i>
-                                                        {{ $articulo['categoria'] }}
-                                                    </p>
-                                                    <p class="blog-card-two__text">
-                                                        {{ $articulo['descripcion'] }}
-                                                    </p>
-                                                    <div class="blog-card-two__meta">
-                                                        <div class="blog-card-two__author">
-                                                            <img src="{{ asset('angie/img/logo.png') }}"
-                                                                alt="User blog {{$nameEnterprise}}">
-                                                            <h5 class="blog-card-two__author__name">
-                                                                <a aria-label="Leer más de {{ $articulo['titulo'] }}"
-                                                                    href="/blog/articulo/{{ $fn->stringToUrl($articulo['titulo']) }}/{{ $articulo['id'] }}">
-                                                                    Por: {{ $articulo['usuario'] }}
-                                                                </a>
-                                                            </h5>
+                                    <div class="row mt-7">
+                                        <div class="preview-card">
+                                            <div class="preview-card__wrp">
+                                                <div class="preview-card__item">
+                                                    <a
+                                                        href="/blog/articulo/{{ $fn->stringToUrl($articulo['titulo']) }}/{{ $articulo['id'] }}">
+                                                        <div class="preview-card__img">
+                                                            <img src="{{ $articulo['carrousel'] }}"
+                                                                alt="{{ $articulo['titulo'] }}">
                                                         </div>
-                                                        <a aria-label="Leer más de {{ $articulo['titulo'] }}"
-                                                            href="/blog/articulo/{{ $fn->stringToUrl($articulo['titulo']) }}/{{ $articulo['id'] }}"
-                                                            class="blog-card-two__rm"><span
-                                                                class="icon-right-arrow"></span></a>
+                                                    </a>
+                                                    <div class="preview-card__content">
+                                                        <span class="preview-card__code">{{ $articulo['usuario'] }}</span>
+                                                        <div class="preview-card__title">{{ $articulo['titulo'] }}</div>
+                                                        <div class="preview-card__text">
+                                                            {{ $fn->recortar_cadena($articulo['descripcion'], 100) }}</div>
+                                                        <a href="/blog/articulo/{{ $fn->stringToUrl($articulo['titulo']) }}/{{ $articulo['id'] }}"
+                                                            class="preview-card__button">Leer Articulo</a>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <a aria-label="Leer más de {{ $articulo['titulo'] }}"
-                                                    href="/blog/articulo/{{ $fn->stringToUrl($articulo['titulo']) }}/{{ $articulo['id'] }}"
-                                                    class="blog-card-two__image">
-                                                    <img src="{{ $articulo['carrousel'] }}"
-                                                        alt="Imagen de {{ $articulo['titulo'] }}">
-                                                    <div class="blog-card-two__image__overlay">
-                                                        <span class="fa-brands fa-readme"></span>
-                                                    </div>
-                                                </a>
+
                                             </div>
                                         </div>
                                     </div>

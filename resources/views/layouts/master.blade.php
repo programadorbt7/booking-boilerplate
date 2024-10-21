@@ -11,20 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="BookingTech">
     @yield('metaSEO')
-    {{-- FAVICON --}}
-    {{-- <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('assets/images/favicons/apple-icon-57x57.png') }}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('assets/images/favicons/apple-icon-60x60.png') }}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('assets/images/favicons/apple-icon-72x72.png') }}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('assets/images/favicons/apple-icon-76x76.png') }}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('assets/images/favicons/apple-icon-114x114.png') }}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('assets/images/favicons/apple-icon-120x120.png') }}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('assets/images/favicons/apple-icon-144x144.png') }}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('assets/images/favicons/apple-icon-152x152.png') }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/images/favicons/apple-icon-180x180.png') }}"> --}}
+  
     <link rel="icon" type="image/png" sizes="32x32"
-        href="{{ asset('angie/img/favicon-32x32.png') }}">
+        href="{{ asset('travezo/img/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16"
-        href="{{ asset('angie/img/favicon-32x32.png') }}">
+        href="{{ asset('travezo/img/favicon-32x32.png') }}">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="{{ asset('assets/images/favicons/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
@@ -52,8 +43,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/trevlo.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/stylesTransportacionListDaniel.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('cucapah/css/main.css') }}">
-    <link rel="stylesheet" href="{{ asset('angie/css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('travezo/css/main.css') }}">
     <style>
         #whatsapp-float {
             display: block;
@@ -101,8 +91,8 @@
     {{-- PRELOADER --}}
     <div class="preloader">
         <div class="loader-svg-img">
-            <img alt="favicon" loading="lazy" class="img-preloader"
-                src="{{ asset('angie/img/logo.png') }}" style="width: 120px">
+            <img alt="favicon" class="img-preloader"
+                src="{{ asset('travezo/img/logo_travezo.webp') }}" style="width: 120px">
             <div class="flight-icon"><i aria-hidden="true" class="fa fa-plane"
                     style="transform: rotate(-70deg)"></i></div>
         </div>
@@ -216,7 +206,7 @@
                     <div class="d-flex">
                         <div class="col-sm-6">
                             <a href="/">
-                                <img class="imgLogoMenu" src="{{ asset('angie/img/logo.png') }}" alt="{{ $nameEnterprise }}">
+                                <img class="imgLogoMenu" src="{{ asset('travezo/img/logo_travezo.webp') }}" alt="{{ $nameEnterprise }}">
                             </a>
                         </div>
                         <div class="col-sm-6 contentInfoData">
@@ -332,19 +322,13 @@
                         {{-- LOGO --}}
                         <div class="main-header__logo">
                             <a href="/">
-                                <img src="{{ asset('angie/img/logo.png') }}"
+                                <img src="{{ asset('travezo/img/logo_travezo.webp') }}"
                                     alt="Logo {{ $nameEnterprise }}" width="146" class="imgHeaderHome">
                             </a>
                         </div>
                         {{-- NAV MENU --}}
                         <nav class="main-header__nav main-menu">
                             <ul class="main-menu__list">
-                                <li>
-                                    <a class="flexIconsMenu" aria-label="Inicio" href="/">
-                                        <span><i class="fa-solid fa-house-chimney"></i></span>
-                                        Inicio
-                                    </a>
-                                </li>
                                 <li class="dropdown">
                                     {{-- <div class="flexIconsMenu">
                                     </div> --}}
@@ -364,19 +348,7 @@
                                         @endforeach
                                     </ul>
                                 </li>
-                                <li>
-                                    <a class="flexIconsMenu" aria-label="Eventos" href="/eventos">
-                                        <span><i class="fa-solid fa-champagne-glasses"></i></span>
-                                        Eventos
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="flexIconsMenu" aria-label="Grupos" href="/grupos">
-                                        <span><i class="fa-solid fa-people-group"></i></span>
-                                        Grupos
-                                    </a>
-                                </li>
+                        
                                 @if ($megaTravel != null)
                                     <li class="dropdown">
                                         <a class="flexIconsMenu">
@@ -439,19 +411,6 @@
                         </div>
                         {{-- TELEFONO & CURRENCY --}}
                         <div class="main-header__right-right">
-                            {{-- @if ($sitioweb[0]->telefono != '')
-                                <div class="main-header__phone">
-                                    <div class="main-header__phone-icon">
-                                        <span class="icon-phone-1"></span>
-                                    </div>
-                                    <div class="main-header__phone-text">
-                                        <p class="main-header__phone-title">Llámanos</p>
-                                        <h4 class="main-header__phone-number"><a
-                                                href="tel:{{ $sitioweb[0]->telefono }}">{{ $sitioweb[0]->telefono }}</a>
-                                        </h4>
-                                    </div>
-                                </div>
-                            @endif --}}
                             <div class="main-header__divider"></div>
                             <ul class="main-header__search-user">
                                 <li class="main-header__search-user-item">
@@ -486,7 +445,7 @@
                     <div class="col-lg-4 col-sm-12">
                         <div class="main-footer__logo-box d-flex justify-content-center">
                             <a href="/" aria-label="Inicio" class="hrefImgLogoFooter">
-                                <img src="{{ asset('angie/img/logo.png') }}"
+                                <img src="{{ asset('travezo/img/logo_travezo.webp') }}"
                                     alt="logo {{ $nameEnterprise }}" class="main-footer__logo">
                             </a>
                         </div>
@@ -659,7 +618,7 @@
 
             <div class="logo-box my-4">
                 <a href="/" aria-label="logo image" class="logoMobile"><img
-                        src="{{ asset('angie/img/logo.png') }}" width="155"
+                        src="{{ asset('travezo/img/logo_travezo.webp') }}" width="155"
                         alt="Logo {{ $nameEnterprise }}" /></a>
             </div>
             <div class="mobile-nav__container"></div>
