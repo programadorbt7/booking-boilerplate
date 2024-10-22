@@ -393,7 +393,7 @@
                                         Nosotros
                                     </a>
                                 </li>
-                                <li>
+                                <li style="margin-right: 30px">
                                     <a class="flexIconsMenu" aria-label="Contacto" href="/contacto">
                                         <span><i class="fa-solid fa-address-book"></i></span>
                                         Contacto
@@ -566,7 +566,7 @@
                             <h2 class="footer-widget__title">Contacto</h2>
                             <p class="footer-widget__address">
                                 <span class="topbar-one__info-icon icon-location-1"></span>
-                                Catania Residencial CP 77536, Cancun Q.R.
+                                Dirección Temporal
                             </p>
                             <ul class="footer-widget__info">
                                 @if ($sitioweb[0]->telefono != '')
