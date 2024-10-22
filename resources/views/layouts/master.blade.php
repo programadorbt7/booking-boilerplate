@@ -12,13 +12,9 @@
     <meta name="author" content="BookingTech">
     @yield('metaSEO')
   
-    <link rel="icon" type="image/png" sizes="32x32"
-        href="{{ asset('travezo/img/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16"
-        href="{{ asset('travezo/img/favicon-32x32.png') }}">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="{{ asset('assets/images/favicons/ms-icon-144x144.png') }}">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('travezo/img/apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('travezo/img/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('travezo/img/favicon-16x16.png')}}">
     {{-- FONT Cucapah --}}
     {{-- <link href="https://fonts.cdnfonts.com/css/metropolis-2" rel="stylesheet"> --}}
     {{-- FONT AWESOME --}}
@@ -44,6 +40,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/stylesTransportacionListDaniel.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('travezo/css/main.css') }}">
+
     <style>
         #whatsapp-float {
             display: block;
