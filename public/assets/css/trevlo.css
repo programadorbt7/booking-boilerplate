@@ -8174,12 +8174,12 @@ body.megamenu-popup-active .mobile-nav__content {
 -----------------------------------------*/
 .why-choose-two {
   position: relative;
-  padding: 120px 0;
+  padding: 60px 0;
 }
 
 @media (max-width: 767px) {
   .why-choose-two {
-    padding: 80px 0;
+    padding: 60px 0;
   }
 }
 

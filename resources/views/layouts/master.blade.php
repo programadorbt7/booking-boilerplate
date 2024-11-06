@@ -15,9 +15,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{{asset('travezo/img/apple-touch-icon.png')}}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{asset('travezo/img/favicon-32x32.png')}}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('travezo/img/favicon-16x16.png')}}">
-    {{-- FONT Cucapah --}}
-    {{-- <link href="https://fonts.cdnfonts.com/css/metropolis-2" rel="stylesheet"> --}}
-    {{-- FONT AWESOME --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />

@@ -111,7 +111,7 @@ a .card-grid-popup2:hover {
     gap: 8px;
 }
 
-.statusSandBox > img {
+.statusSandBox>img {
     height: 33px;
     filter: invert(1);
     animation-name: zoom;
@@ -123,7 +123,8 @@ a .card-grid-popup2:hover {
     .statusSandBox {
         font-size: 22px;
     }
-    .statusSandBox > img {
+
+    .statusSandBox>img {
         height: 24px;
     }
 }
@@ -132,15 +133,19 @@ a .card-grid-popup2:hover {
     0% {
         transform: scale(1);
     }
+
     20% {
         transform: scale(1.2);
     }
+
     33% {
         transform: scale(1.25);
     }
+
     57% {
         transform: scale(1.2);
     }
+
     100% {
         transform: scale(1);
     }
@@ -207,18 +212,18 @@ a .card-grid-popup2:hover {
 
 .container-exp .details-exp {
     word-wrap: break-word !important;
-  word-break: break-word !important;
+    word-break: break-word !important;
 }
 
 .contenedor-otras-exp .details-exp {
     word-wrap: break-word !important;
-  word-break: break-word !important;
+    word-break: break-word !important;
 }
 
 
 .tour-type-two__box__back__content {
     word-wrap: break-word !important;
-  word-break: break-word !important;
+    word-break: break-word !important;
 }
 
 
@@ -234,22 +239,22 @@ a .card-grid-popup2:hover {
 
 .tour-type-two__box__front__title {
     display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 @media (max-width: 513px) {
-.correcion-pedrito-20 {
-padding: 0px;
+    .correcion-pedrito-20 {
+        padding: 0px;
+    }
+
+    .container-exp {
+        margin: 0 2.5rem;
+    }
 }
 
-.container-exp {
-    margin: 0 2.5rem;
-}
-}
-
-@media (max-width: 484px){
+@media (max-width: 484px) {
     .correcion-pedrito-21 {
         font-size: 33px;
     }
@@ -364,7 +369,8 @@ padding: 0px;
     color: white;
 }
 
-.promos .incluye p, .promos .incluye i {
+.promos .incluye p,
+.promos .incluye i {
     color: white;
 }
 
@@ -376,3 +382,10 @@ padding: 0px;
     padding-top: 1.5rem;
 }
 
+.accordion-button {
+    font-family: var(--trevlo-font, "Metropolis", sans-serif);
+    font-size: var(--trevlo-size-2xl, 16px);
+    color: var(--trevlo-secondary, #736D75);
+    line-height: 1.875;
+    font-weight: 500;
+}
