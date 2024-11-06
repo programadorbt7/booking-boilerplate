@@ -28,7 +28,7 @@
     <section class="about-four section-space-top">
         <div class="container">
             <div class="row">
-                <div class="col-xl-6 col-lg-6 about-four__img-column wow animated fadeInLeft" data-wow-delay="0.1s"
+                <div class="col-xl-6 col-lg-6 about-four__img-column wow animated about-image-container fadeInLeft" data-wow-delay="0.1s"
                     data-wow-duration="1500ms">
                     <div class="about-four__img-box">
                         <div class="about-four__inner-img-box-one">
@@ -91,6 +91,9 @@
     <section class="why-choose-two">
         <div class="container">
             <div class="row">
+                <div class="col-lg-12 img-divider">
+                    <img src="{{asset('assets/images/pexels-pixabay-417351.webp')}}">
+                </div>
                 <div class="col-lg-6 col-xl-6 wow fadeInLeft" data-wow-delay="200ms">
                     <div class="why-choose-two__content">
                         <p class="why-choose-two__text">
@@ -110,7 +113,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-6 col-xl-6">
+                <div class="col-lg-6 col-xl-6 about-image-container">
                     <div class="why-choose-two__img">
                         <div class="why-choose-two__img__one wow fadeInUp" data-wow-delay="200ms">
                             <div class="trevlo-tilt"
@@ -138,22 +141,26 @@
     <section class="why-choose-two">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-xl-6">
+                <div class="col-lg-12 img-divider">
+                    <img src="{{asset('assets/images/pexels-samsilitongajr-837745.webp')}}">
+                </div>
+
+                <div class="col-lg-6 col-xl-6 about-image-container">
                     <div class="why-choose-two__img">
                         <div class="why-choose-two__img__one wow fadeInUp" data-wow-delay="200ms">
                             <div class="trevlo-tilt"
                                 data-tilt-options='{ "glare": false, "maxGlare": 0, "maxTilt": 7, "speed": 700, "scale": 1 }'>
-                                <img src="{{ asset('assets/images/nosotros/imagen_nosotros3.webp') }}" alt="why-choose">
+                                <img src="{{ asset('assets/images/pexels-alessio-cesario-975080-1906879.webp') }}" alt="why-choose">
                             </div>
                         </div><!-- /.why-choose-two__img__one -->
                         <div class="why-choose-two__img__two wow fadeInUp" data-wow-delay="300ms">
                             <div class="trevlo-tilt"
                                 data-tilt-options='{ "glare": false, "maxGlare": 0, "maxTilt": 7, "speed": 700, "scale": 1 }'>
-                                <img src="{{ asset('assets/images/nosotros/imagen_nosotros4.webp') }}" alt="why-choose">
+                                <img src="{{ asset('assets/images/pexels-david-bartus-43782-586687.webp') }}" alt="why-choose">
                             </div>
                             <div class="trevlo-tilt"
                                 data-tilt-options='{ "glare": false, "maxGlare": 0, "maxTilt": 7, "speed": 700, "scale": 1 }'>
-                                <img src="{{ asset('assets/images/nosotros/imagen_nosotros5.webp') }}" alt="why-choose">
+                                <img src="{{ asset('assets/images/pexels-samsilitongajr-837745.webp') }}" alt="why-choose">
                             </div>
                         </div>
                     </div>
@@ -196,8 +203,13 @@
                         <h2 class="sec-title__title">¿Por qué {{ $nameEnterprise }} es diferente? </h2>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <img style="width: 100%; height:400px; object-fit:cover; border-radius:20px" src="{{ asset('assets/images/nosotros/imagen_nosotros3.webp') }}">
+
+                <div class="col-lg-12 img-divider">
+                    <img src="{{asset('assets/images/distintivos.jpg')}}">
+                </div>
+
+                <div class="col-lg-6 about-image-container">
+                    <img style="width: 100%; height:400px; object-fit:cover; border-radius:20px" src="{{ asset('assets/images/pexels-pixabay-417351.webp') }}">
                 </div>
                 <div class="col-lg-6" style="display: flex; align-items:center">
                     <p class="why-choose-two__text">

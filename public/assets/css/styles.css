@@ -389,3 +389,26 @@ a .card-grid-popup2:hover {
     line-height: 1.875;
     font-weight: 500;
 }
+
+.img-divider img{
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+@media(max-width:991px){
+    .about-image-container{
+        display: none;
+    }
+
+    .img-divider{
+        display: block;
+    }
+}
+
+
+@media(min-width:991px){
+    .img-divider{display: none;}
+}
