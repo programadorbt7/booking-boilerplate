@@ -13,15 +13,12 @@ class ApiController extends Controller
     public $cookie;
 
     public function __construct()
-    {   //Token de pruebas
-        //$this->token = "Bearer 104|iA0ondbvYPhe24x4RxyOk3yXSwZ9fXSOghHESRMMaf1099b8";
+    {   
         $this->token = "Bearer 104|iA0ondbvYPhe24x4RxyOk3yXSwZ9fXSOghHESRMMaf1099b8";
         $this->cookie = "XSRF-TOKEN=".uniqid('bt_');
     }
 
     public function token(){
-        //Token de pruebas
-        //return '104|iA0ondbvYPhe24x4RxyOk3yXSwZ9fXSOghHESRMMaf1099b8';
         return "104|iA0ondbvYPhe24x4RxyOk3yXSwZ9fXSOghHESRMMaf1099b8";
     }
 

@@ -273,13 +273,7 @@
                     }
                 })
                 .done(function(e) {
-                    console.log('adentro de la respuesta del ajax');
-                    // console.log(e);
                     var total = e.length;
-                    console.log(e[e.length - 1]);
-                    console.log('Total');
-                    console.log(total);
-                    // console.log(e[e(slice-1)]);
                     for (let i in e) {
                         sum = i * 1000;
                         escribir(e[i]);
@@ -293,7 +287,6 @@
                     $("#nombreHotel").autocomplete('option', 'source', nombresHotels);
                 })
                 .fail(function() {
-                    console.log('error 500');
                     $("#hotelCardSkeleton").empty();
                     let nombreDestinnoHotelero = nombreDestinoHotelero;
                     let contenedorHtml = $('#json');

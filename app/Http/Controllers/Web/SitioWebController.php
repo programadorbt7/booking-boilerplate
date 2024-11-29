@@ -1198,6 +1198,7 @@ class SitioWebController extends Controller
         } else {
             $formReserva["paxesMenores"] = 0;
         }
+       
 
         $reservacion = $this->experiencias->agregarReservacion($formReserva);
 
@@ -1555,7 +1556,6 @@ class SitioWebController extends Controller
 
     public function getPrices(Request $request)
     {
-
         $data           = json_decode($request->data);
         $idtour         = $data->tour;
         $dias           = $data->dias;
